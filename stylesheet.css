@@ -1,0 +1,74 @@
+div{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    text-align: center;
+    justify-content: center;
+    color: white;
+}
+
+
+.name{
+    grid-area:name;
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.navbar{
+    grid-area:navbar;
+    justify-content: space-around;
+}
+
+.navLinkTop{
+    justify-content: space-evenly;
+}
+
+.navLink{
+    color:white;
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: 30px;
+    font-weight: 200;
+    font-style: normal;
+    margin-left:30px;
+    margin-right:30px;
+}
+
+.main{
+    grid-area:main;
+}
+
+.embed{
+    background-color: white;
+    color:white;
+}
+
+.profileImg{
+    grid-area:profileImg;
+}
+
+.resume{
+    grid-area:resume;
+}
+
+#body{
+    background-image:url("assets\mainBackgroundImage.png");
+    background-repeat: no-repeat;
+    width: 100vh;
+    height: 100vh;
+}
+
+.layout{
+    width:100vw;
+    height:100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:15% 85%;
+
+    grid-template-areas: 
+    "navbar"
+    "main"
+    "resume";
+}
