@@ -28298,10 +28298,10 @@ var _react = _interopRequireDefault(require("react"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var linkItems = [{
-  name: "Link1",
+  name: "Work Experience",
   href: ""
 }, {
-  name: "Link2",
+  name: "Hobbies and Project",
   href: ""
 }];
 
@@ -28316,7 +28316,7 @@ function Navbar() {
   return _react.default.createElement("div", {
     className: "navbar"
   }, _react.default.createElement("header", {
-    class: "name"
+    className: "name"
   }, "Thomas Shih"), _react.default.createElement("div", {
     className: "navLinkTop"
   }, NavbarItems));
@@ -28325,27 +28325,7 @@ function Navbar() {
 ;
 var _default = Navbar;
 exports.default = _default;
-},{"react":"../../node_modules/react/index.js"}],"components/Main.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireDefault(require("react"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function Main() {
-  return _react.default.createElement("div", {
-    class: "main"
-  }, "This is the main Content");
-}
-
-var _default = Main;
-exports.default = _default;
-},{"react":"../../node_modules/react/index.js"}],"Landing.js":[function(require,module,exports) {
+},{"react":"../../node_modules/react/index.js"}],"work.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -28357,35 +28337,91 @@ var _react = _interopRequireDefault(require("react"));
 
 var _Navbar = _interopRequireDefault(require("./components/Navbar"));
 
-var _Main = _interopRequireDefault(require("./components/Main"));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function Landing() {
+var companyList = [{
+  name: "Bombardier Aerospace",
+  imageUrl: "https://www.bombardier.com/content/dam/Websites/bombardiercom/system/Bombardier_Logo.svg",
+  url: "http://www.bombardier.com/",
+  jobTitle: "Business Analyst/Full Stack Developer",
+  desc: "Front-End web development (jQuery,JavaScript) | Back-end data analysist (Python: Pandas, AWS S3) | Build, Testing, and Deployment (Azure DevOps)",
+  length: "2019-2020"
+}, {
+  name: "ST Engineering iDirect",
+  imageUrl: "https://www.idirect.net/wp-content/themes/idirect/icons/logo-color.svg",
+  url: "https://www.idirect.net/",
+  jobTitle: "Software Engineer",
+  desc: "OSI Layer 2/3 bandwidth testing automation (Bash) | Feature Development and Bug-Fixing (C/C++: Socket)",
+  length: "2018"
+}, {
+  name: "Carleton University",
+  imageUrl: "https://upload.wikimedia.org/wikipedia/en/thumb/f/f4/Carleton_University_logo.svg/330px-Carleton_University_logo.svg.png",
+  url: "https://www.idirect.net/",
+  jobTitle: "Mathematics Teaching Assistant",
+  desc: "Perform Adminstrative Duties | Teach Differential Equations/Multivariable Calculus/Laplace and Fourier Transforms",
+  length: "2018-2019"
+}];
+
+function CompanyProfile(props) {
   return _react.default.createElement("div", {
-    className: "layout"
-  }, _react.default.createElement(_Navbar.default, null), _react.default.createElement(_Main.default, null));
+    className: "companyProfile"
+  }, _react.default.createElement("a", {
+    href: props.url,
+    className: "logo"
+  }, _react.default.createElement("img", {
+    src: props.imageUrl,
+    alt: props.name
+  })), _react.default.createElement("h3", {
+    className: "jobTitle"
+  }, props.jobTitle), _react.default.createElement("p", {
+    className: "desc"
+  }, props.desc), _react.default.createElement("h4", {
+    className: "length"
+  }, props.length));
 }
 
-var _default = Landing;
+function Main() {
+  var companyComponents = companyList.map(function (company) {
+    return _react.default.createElement(CompanyProfile, {
+      key: company.name,
+      name: company.name,
+      imageUrl: company.imageUrl,
+      url: company.url,
+      jobTitle: company.jobTitle,
+      desc: company.desc,
+      length: company.length
+    });
+  });
+  return _react.default.createElement("div", {
+    className: "main"
+  }, companyComponents);
+}
+
+function WorkExperience() {
+  return _react.default.createElement("div", {
+    className: "layout"
+  }, _react.default.createElement(_Navbar.default, null), _react.default.createElement(Main, null));
+}
+
+var _default = WorkExperience;
 exports.default = _default;
-},{"react":"../../node_modules/react/index.js","./components/Navbar":"components/Navbar.js","./components/Main":"components/Main.js"}],"index.js":[function(require,module,exports) {
+},{"react":"../../node_modules/react/index.js","./components/Navbar":"components/Navbar.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
 
 var _reactDom = _interopRequireDefault(require("react-dom"));
 
-var _Landing = _interopRequireDefault(require("./Landing"));
+var _work = _interopRequireDefault(require("./work"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var _window = window,
     anime = _window.anime;
 $(document).ready(function () {
-  _reactDom.default.render(_react.default.createElement(_Landing.default, null), document.getElementById("body"));
+  _reactDom.default.render(_react.default.createElement(_work.default, null), document.getElementById("body"));
 });
-},{"react":"../../node_modules/react/index.js","react-dom":"../../node_modules/react-dom/index.js","./Landing":"Landing.js"}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"../../node_modules/react/index.js","react-dom":"../../node_modules/react-dom/index.js","./work":"work.js"}],"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -28413,7 +28449,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55024" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55018" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -28589,5 +28625,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
+},{}]},{},["../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
 //# sourceMappingURL=/Website.e31bb0bc.js.map

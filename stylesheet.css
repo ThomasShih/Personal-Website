@@ -5,16 +5,24 @@ div{
     overflow-x: hidden;
     text-align: center;
     justify-content: center;
-    color: white;
 }
 
+img{  
+    max-width: 100%;
+    object-fit: scale-down ;
+}
 
 .name{
-    grid-area:name;
-    font-family: Impact, Charcoal, sans-serif;
-    font-size: 40px;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 50px;
+    letter-spacing: -1.2px;
+    word-spacing: 3.2px;
+    color: #ffffff;
     font-weight: 700;
+    text-decoration: none;
     font-style: normal;
+    font-variant: normal;
+    text-transform: none;
 }
 
 .navbar{
@@ -52,15 +60,9 @@ div{
 .resume{
     grid-area:resume;
 }
-
-#body{
-    background-image:url("assets\mainBackgroundImage.png");
-    background-repeat: no-repeat;
-    width: 100vh;
-    height: 100vh;
-}
-
 .layout{
+    background-image:url("assets\mainBackgroundImage.png");
+    background-size: cover;
     width:100vw;
     height:100vh;
     display: grid;
@@ -71,4 +73,61 @@ div{
     "navbar"
     "main"
     "resume";
+}
+
+.logo{
+    grid-area:logo;
+}
+
+.jobTitle{
+    grid-area:jobTitle;
+}
+
+.desc{
+    grid-area:desc;
+}
+
+.length{
+    grid-area:length
+}
+
+
+@media (max-width:1000px){
+    .companyProfile{
+        background-color: aqua;
+        color:black;
+        border: 10px outset #D4D6D6;
+        border-radius: 5px;
+        margin: 30px;
+        padding:10px;
+        align-items: center;
+        display: grid;
+
+        grid-template-rows: auto;
+        grid-row-gap: 5px;
+        grid-template-areas: 
+        "logo"
+        "jobTitle"
+        "length"
+        "desc";
+    }
+}
+
+@media (min-width:1001px){
+    .companyProfile{
+        background-color: aqua;
+        color:black;
+        border: 10px outset #D4D6D6;
+        border-radius: 5px;
+        margin: 30px;
+        padding:10px;
+        align-items: center;
+        display: grid;
+
+        grid-template-columns: 2fr 6fr 1fr;
+        grid-template-rows: 1fr 2fr;
+        grid-template-areas: 
+        "logo jobTitle length"
+        "logo desc     length";
+    }
 }

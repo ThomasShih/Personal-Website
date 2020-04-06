@@ -3,7 +3,7 @@ import React from "react"
 import Navbar from "./components/Navbar"
 import Main from "./components/Main"
 
-function Landing(){
+function WorkExperience(){
     return(
       <div className="layout">
         <Navbar/>
@@ -11,4 +11,4 @@ function Landing(){
       </div>
   )}
 
-export default Landing
+export default WorkExperience
