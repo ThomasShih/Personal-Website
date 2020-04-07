@@ -1,0 +1,129 @@
+.logo{
+    width: 100%;
+    object-fit: scale-down ;
+}
+
+.main{
+    grid-area:main;
+}
+.aside{
+    grid-area: aside;
+}
+.profileImg{
+    grid-area:profileImg;
+}
+.resume{
+    grid-area:resume;
+}
+.logoLink{
+    grid-area:logo;
+}
+.jobTitle{
+    grid-area:jobTitle;
+    color:#3E688C;
+}
+.desc{
+    grid-area:desc;
+}
+.length{
+    grid-area:length;
+    color:#3E688C;
+}
+.referenceName{
+    grid-area:referenceName;
+    color:#3E688C;
+}
+.position{
+    grid-area:position;
+    color:#3E688C;
+}
+.company{
+    grid-area:company;
+    color:#3E688C;
+}
+
+.referenceText{
+    grid-area:referenceText;
+    font-family: "Times New Roman", Times, serif;
+    font-style: italic;
+    padding-top:5px;
+}
+.imgUrl{
+    grid-area:imgUrl;
+    border-radius: 50%;
+}
+
+.recommendationCard{
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    background-color: #F2F3F6;
+    border-radius: 25px;
+    color:black;
+    margin-top: 20px;
+    margin-left: 15px;
+    margin-right:15px;
+    padding:10px;
+    align-items: center;
+    display: grid;
+
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 3fr;
+
+    grid-template-areas: 
+    "imgUrl referenceName"
+    "imgUrl position"
+    "imgUrl company"
+    "referenceText referenceText";
+}
+
+@media (max-width:1000px){
+    .companyProfile{
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+        background-color: #F2F3F6;
+        border-radius: 25px;
+        margin: 15px;
+        padding:10px;
+        align-items: center;
+        display: grid;
+
+        grid-template-rows: auto;
+        grid-row-gap: 5px;
+        grid-template-areas: 
+        "logo"
+        "jobTitle"
+        "length"
+        "desc";
+    }
+}
+
+@media (min-width:1001px){
+    .companyProfile{
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+        background-color: #F2F3F6;
+        border-radius: 25px;
+        margin-top: 20px;
+        margin-left: 15px;
+        padding:10px;
+        align-items: center;
+        display: grid;
+
+        grid-template-columns: 2fr 4fr 1fr;
+        grid-template-rows: 1fr 2fr;
+        grid-template-areas: 
+        "logo jobTitle length"
+        "logo desc     length";
+    }
+
+    .navLinkTop{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .layout{
+        display:grid;
+        grid-template-rows: auto ;
+        grid-template-columns: 3fr 2fr;
+        grid-template-areas: 
+        "navbar navbar"
+        "main   aside";
+    }
+}
