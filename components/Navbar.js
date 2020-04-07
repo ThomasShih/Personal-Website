@@ -1,25 +1,24 @@
 import React from "react"
+import navbarLinks from "../assets/navbarLinks"
 
-var linkItems = [
-    {
-        name:"Work Experience",
-        href:""
-    },{
-        name:"Hobbies and Project",
-        href:""}
-]
+function NavbarLinks(props){
+  return(
+    <div><a className="navLink" href={props.href}>{props.name}</a></div>
+)}
 
 function Navbar(){
-    var NavbarItems = linkItems.map(linkItems => <a className="navLink" key={linkItems.name} href={linkItems.href}>{linkItems.name}</a>)
-    return(
-        <div className="navbar">
-            <header className="name">
-                Thomas Shih
-            </header>
-            <div className="navLinkTop">
-                {NavbarItems}
-            </div>
-        </div>
-  )};
+  const navbarComponents = navbarLinks.map(link => <NavbarLinks key={link.name}
+                                                                href={link.href}
+                                                                name={link.name}/>)
+  return(
+    <div className="navbar">
+      <header className="name">
+        Thomas Shih
+      </header>
+      <div className="navLinkTop">
+        {navbarComponents}
+      </div>
+    </div>
+)};
 
 export default Navbar

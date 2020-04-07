@@ -2,21 +2,12 @@ div{
     margin:0px;
     padding:0px;
     box-sizing: border-box;
-    overflow-x: hidden;
     text-align: center;
     justify-content: center;
 }
 
-img{  
-    max-width: 100%;
-    object-fit: scale-down ;
-}
-
 .name{
-    font-family: Verdana, Geneva, sans-serif;
     font-size: 50px;
-    letter-spacing: -1.2px;
-    word-spacing: 3.2px;
     color: #ffffff;
     font-weight: 700;
     text-decoration: none;
@@ -28,77 +19,106 @@ img{
 .navbar{
     grid-area:navbar;
     justify-content: space-around;
-}
-
-.navLinkTop{
-    justify-content: space-evenly;
+    background-color: #7B769E;
 }
 
 .navLink{
-    color:white;
-    font-family: Impact, Charcoal, sans-serif;
-    font-size: 30px;
+    border: 1px solid #F2F3F6;
+    padding:5px;
+    color:#F2F3F6;
+    font-size: 35px;
     font-weight: 200;
     font-style: normal;
-    margin-left:30px;
-    margin-right:30px;
+}
+
+.embed{
+    background-color: #F2F3F6;
+    color:#F2F3F6;
+}
+
+.logo{
+    width: 100%;
+    object-fit: scale-down ;
 }
 
 .main{
     grid-area:main;
 }
-
-.embed{
-    background-color: white;
-    color:white;
+.aside{
+    grid-area: aside;
 }
-
 .profileImg{
     grid-area:profileImg;
 }
-
 .resume{
     grid-area:resume;
 }
-.layout{
-    background-image:url("assets\mainBackgroundImage.png");
-    background-size: cover;
-    width:100vw;
-    height:100vh;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows:15% 85%;
-
-    grid-template-areas: 
-    "navbar"
-    "main"
-    "resume";
-}
-
-.logo{
+.logoLink{
     grid-area:logo;
 }
-
 .jobTitle{
     grid-area:jobTitle;
+    color:#3E688C;
 }
-
 .desc{
     grid-area:desc;
 }
-
 .length{
-    grid-area:length
+    grid-area:length;
+    color:#3E688C;
+}
+.referenceName{
+    grid-area:referenceName;
+    color:#3E688C;
+}
+.position{
+    grid-area:position;
+    color:#3E688C;
+}
+.company{
+    grid-area:company;
+    color:#3E688C;
 }
 
+.referenceText{
+    grid-area:referenceText;
+    font-family: "Times New Roman", Times, serif;
+    font-style: italic;
+    padding-top:5px;
+}
+.imgUrl{
+    grid-area:imgUrl;
+    border-radius: 50%;
+}
+
+.recommendationCard{
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    background-color: #F2F3F6;
+    border-radius: 25px;
+    color:black;
+    margin-top: 20px;
+    margin-left: 15px;
+    margin-right:15px;
+    padding:10px;
+    align-items: center;
+    display: grid;
+
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 3fr;
+
+    grid-template-areas: 
+    "imgUrl referenceName"
+    "imgUrl position"
+    "imgUrl company"
+    "referenceText referenceText";
+}
 
 @media (max-width:1000px){
     .companyProfile{
-        background-color: aqua;
-        color:black;
-        border: 10px outset #D4D6D6;
-        border-radius: 5px;
-        margin: 30px;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+        background-color: #F2F3F6;
+        border-radius: 25px;
+        margin: 15px;
         padding:10px;
         align-items: center;
         display: grid;
@@ -111,23 +131,42 @@ img{
         "length"
         "desc";
     }
+
+    .layout{
+        background-color: #3E688C;
+    }
 }
 
 @media (min-width:1001px){
     .companyProfile{
-        background-color: aqua;
-        color:black;
-        border: 10px outset #D4D6D6;
-        border-radius: 5px;
-        margin: 30px;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+        background-color: #F2F3F6;
+        border-radius: 25px;
+        margin-top: 20px;
+        margin-left: 15px;
         padding:10px;
         align-items: center;
         display: grid;
 
-        grid-template-columns: 2fr 6fr 1fr;
+        grid-template-columns: 2fr 4fr 1fr;
         grid-template-rows: 1fr 2fr;
         grid-template-areas: 
         "logo jobTitle length"
         "logo desc     length";
+    }
+
+    .navLinkTop{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .layout{
+        background-color: #3E688C;
+        display:grid;
+        grid-template-rows: auto ;
+        grid-template-columns: 3fr 2fr;
+        grid-template-areas: 
+        "navbar navbar"
+        "main   aside";
     }
 }

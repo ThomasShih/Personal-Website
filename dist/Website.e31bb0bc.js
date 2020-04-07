@@ -117,7 +117,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../../node_modules/object-assign/index.js":[function(require,module,exports) {
+})({"../../../node_modules/object-assign/index.js":[function(require,module,exports) {
 /*
 object-assign
 (c) Sindre Sorhus
@@ -213,7 +213,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 
   return to;
 };
-},{}],"../../node_modules/prop-types/lib/ReactPropTypesSecret.js":[function(require,module,exports) {
+},{}],"../../../node_modules/prop-types/lib/ReactPropTypesSecret.js":[function(require,module,exports) {
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -227,7 +227,7 @@ var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
 
 module.exports = ReactPropTypesSecret;
 
-},{}],"../../node_modules/prop-types/checkPropTypes.js":[function(require,module,exports) {
+},{}],"../../../node_modules/prop-types/checkPropTypes.js":[function(require,module,exports) {
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -323,7 +323,7 @@ checkPropTypes.resetWarningCache = function () {
 };
 
 module.exports = checkPropTypes;
-},{"./lib/ReactPropTypesSecret":"../../node_modules/prop-types/lib/ReactPropTypesSecret.js"}],"../../node_modules/react/cjs/react.development.js":[function(require,module,exports) {
+},{"./lib/ReactPropTypesSecret":"../../../node_modules/prop-types/lib/ReactPropTypesSecret.js"}],"../../../node_modules/react/cjs/react.development.js":[function(require,module,exports) {
 /** @license React v16.13.1
  * react.development.js
  *
@@ -2200,7 +2200,7 @@ if ("development" !== "production") {
     exports.version = ReactVersion;
   })();
 }
-},{"object-assign":"../../node_modules/object-assign/index.js","prop-types/checkPropTypes":"../../node_modules/prop-types/checkPropTypes.js"}],"../../node_modules/react/index.js":[function(require,module,exports) {
+},{"object-assign":"../../../node_modules/object-assign/index.js","prop-types/checkPropTypes":"../../../node_modules/prop-types/checkPropTypes.js"}],"../../../node_modules/react/index.js":[function(require,module,exports) {
 'use strict';
 
 if ("development" === 'production') {
@@ -2208,7 +2208,7 @@ if ("development" === 'production') {
 } else {
   module.exports = require('./cjs/react.development.js');
 }
-},{"./cjs/react.development.js":"../../node_modules/react/cjs/react.development.js"}],"../../node_modules/scheduler/cjs/scheduler.development.js":[function(require,module,exports) {
+},{"./cjs/react.development.js":"../../../node_modules/react/cjs/react.development.js"}],"../../../node_modules/scheduler/cjs/scheduler.development.js":[function(require,module,exports) {
 /** @license React v0.19.1
  * scheduler.development.js
  *
@@ -3063,7 +3063,7 @@ if ("development" !== "production") {
     exports.unstable_wrapCallback = unstable_wrapCallback;
   })();
 }
-},{}],"../../node_modules/scheduler/index.js":[function(require,module,exports) {
+},{}],"../../../node_modules/scheduler/index.js":[function(require,module,exports) {
 'use strict';
 
 if ("development" === 'production') {
@@ -3071,7 +3071,7 @@ if ("development" === 'production') {
 } else {
   module.exports = require('./cjs/scheduler.development.js');
 }
-},{"./cjs/scheduler.development.js":"../../node_modules/scheduler/cjs/scheduler.development.js"}],"../../node_modules/scheduler/cjs/scheduler-tracing.development.js":[function(require,module,exports) {
+},{"./cjs/scheduler.development.js":"../../../node_modules/scheduler/cjs/scheduler.development.js"}],"../../../node_modules/scheduler/cjs/scheduler-tracing.development.js":[function(require,module,exports) {
 /** @license React v0.19.1
  * scheduler-tracing.development.js
  *
@@ -3419,7 +3419,7 @@ if ("development" !== "production") {
     exports.unstable_wrap = unstable_wrap;
   })();
 }
-},{}],"../../node_modules/scheduler/tracing.js":[function(require,module,exports) {
+},{}],"../../../node_modules/scheduler/tracing.js":[function(require,module,exports) {
 'use strict';
 
 if ("development" === 'production') {
@@ -3427,7 +3427,7 @@ if ("development" === 'production') {
 } else {
   module.exports = require('./cjs/scheduler-tracing.development.js');
 }
-},{"./cjs/scheduler-tracing.development.js":"../../node_modules/scheduler/cjs/scheduler-tracing.development.js"}],"../../node_modules/react-dom/cjs/react-dom.development.js":[function(require,module,exports) {
+},{"./cjs/scheduler-tracing.development.js":"../../../node_modules/scheduler/cjs/scheduler-tracing.development.js"}],"../../../node_modules/react-dom/cjs/react-dom.development.js":[function(require,module,exports) {
 /** @license React v16.13.1
  * react-dom.development.js
  *
@@ -28247,7 +28247,7 @@ if ("development" !== "production") {
     exports.version = ReactVersion;
   })();
 }
-},{"react":"../../node_modules/react/index.js","object-assign":"../../node_modules/object-assign/index.js","scheduler":"../../node_modules/scheduler/index.js","prop-types/checkPropTypes":"../../node_modules/prop-types/checkPropTypes.js","scheduler/tracing":"../../node_modules/scheduler/tracing.js"}],"../../node_modules/react-dom/index.js":[function(require,module,exports) {
+},{"react":"../../../node_modules/react/index.js","object-assign":"../../../node_modules/object-assign/index.js","scheduler":"../../../node_modules/scheduler/index.js","prop-types/checkPropTypes":"../../../node_modules/prop-types/checkPropTypes.js","scheduler/tracing":"../../../node_modules/scheduler/tracing.js"}],"../../../node_modules/react-dom/index.js":[function(require,module,exports) {
 'use strict';
 
 function checkDCE() {
@@ -28285,47 +28285,23 @@ if ("development" === 'production') {
 } else {
   module.exports = require('./cjs/react-dom.development.js');
 }
-},{"./cjs/react-dom.development.js":"../../node_modules/react-dom/cjs/react-dom.development.js"}],"components/Navbar.js":[function(require,module,exports) {
+},{"./cjs/react-dom.development.js":"../../../node_modules/react-dom/cjs/react-dom.development.js"}],"assets/navbarLinks.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-
-var _react = _interopRequireDefault(require("react"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var linkItems = [{
+var navbarLinks = [{
   name: "Work Experience",
   href: ""
 }, {
   name: "Hobbies and Project",
   href: ""
 }];
-
-function Navbar() {
-  var NavbarItems = linkItems.map(function (linkItems) {
-    return _react.default.createElement("a", {
-      className: "navLink",
-      key: linkItems.name,
-      href: linkItems.href
-    }, linkItems.name);
-  });
-  return _react.default.createElement("div", {
-    className: "navbar"
-  }, _react.default.createElement("header", {
-    className: "name"
-  }, "Thomas Shih"), _react.default.createElement("div", {
-    className: "navLinkTop"
-  }, NavbarItems));
-}
-
-;
-var _default = Navbar;
+var _default = navbarLinks;
 exports.default = _default;
-},{"react":"../../node_modules/react/index.js"}],"work.js":[function(require,module,exports) {
+},{}],"components/Navbar.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -28335,16 +28311,128 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _Navbar = _interopRequireDefault(require("./components/Navbar"));
+var _navbarLinks = _interopRequireDefault(require("../assets/navbarLinks"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function NavbarLinks(props) {
+  return _react.default.createElement("div", null, _react.default.createElement("a", {
+    className: "navLink",
+    href: props.href
+  }, props.name));
+}
+
+function Navbar() {
+  var navbarComponents = _navbarLinks.default.map(function (link) {
+    return _react.default.createElement(NavbarLinks, {
+      key: link.name,
+      href: link.href,
+      name: link.name
+    });
+  });
+
+  return _react.default.createElement("div", {
+    className: "navbar"
+  }, _react.default.createElement("header", {
+    className: "name"
+  }, "Thomas Shih"), _react.default.createElement("div", {
+    className: "navLinkTop"
+  }, navbarComponents));
+}
+
+;
+var _default = Navbar;
+exports.default = _default;
+},{"react":"../../../node_modules/react/index.js","../assets/navbarLinks":"assets/navbarLinks.js"}],"assets/recommendationsList.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var recommendationsList = [{
+  name: "Ramchandu Pindiproli",
+  position: "Senior Technologiest - Cloud and Digital Strategy",
+  company: "Bombardier",
+  text: "I rarely come across real talents who stand out like Thomas. I had the pleasure of working with Thomas for about an year at the Bombardier, collaborating & coaching him on several sales enablement business intelligence projects. Thomas’s ability to handle multiple projects was unlike any I’ve seen before and his contributions helped in dramatic increase in the productivity level of our sales teams No matter how complex a process was, Thomas made sure he brings in ideas to optimize the same and took actions to completion. As a team member or a leader, Thomas earns my highest recommendation.",
+  imgUrl: "https://media-exp1.licdn.com/dms/image/C4E03AQG5CVrfs77Udg/profile-displayphoto-shrink_200_200/0?e=1591833600&v=beta&t=1vaYdnXMgX6Llcn2miRKZ23Myx8JXFWCnh3IbqxI-i4"
+}, {
+  name: "Farzana Mowla",
+  position: "Senior Software Engineer",
+  company: "ST Engineering iDirect",
+  text: "It was my pleasure to work with Thomas during his work term at VT iDirect (currently known as ST Engineering iDirect). Thomas is a fast learner, very methodical and sincere at his work. He always brings smile to the workplace and he is an excellent team player. As Thomas was learning about the systems at his new work, he volunteered to prepare documentation that would be helpful for future new employees. He also prepared performance test reports. Thomas has excellent software development skills and writing skills. I wish him all the best in his future endeavours.",
+  imgUrl: "https://media-exp1.licdn.com/dms/image/C5603AQF6EOLwGtwJig/profile-displayphoto-shrink_200_200/0?e=1591833600&v=beta&t=Jo3TMNGAgFrr1FyNE0Ul9ih1nGJmNL63pCF7mxl_Dj8"
+}];
+var _default = recommendationsList;
+exports.default = _default;
+},{}],"components/LinkedIn.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _recommendationsList = _interopRequireDefault(require("../assets/recommendationsList"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function RecommendationCard(props) {
+  return _react.default.createElement("div", {
+    className: "recommendationCard"
+  }, _react.default.createElement("img", {
+    className: "imgUrl",
+    src: props.imgUrl,
+    alt: "can't find image"
+  }), _react.default.createElement("h3", {
+    className: "referenceName"
+  }, props.name), _react.default.createElement("h4", {
+    className: "position"
+  }, props.position), _react.default.createElement("h4", {
+    className: "company"
+  }, props.company), _react.default.createElement("p", {
+    className: "referenceText"
+  }, props.text));
+}
+
+function Recommendations() {
+  var recommendationsComponents = _recommendationsList.default.map(function (recommendation) {
+    return _react.default.createElement(RecommendationCard, {
+      key: recommendation.name,
+      name: recommendation.name,
+      position: recommendation.position,
+      company: recommendation.company,
+      text: recommendation.text,
+      imgUrl: recommendation.imgUrl
+    });
+  });
+
+  return _react.default.createElement("div", null, recommendationsComponents);
+}
+
+function LinkedIn() {
+  return _react.default.createElement("div", {
+    className: "aside"
+  }, _react.default.createElement(Recommendations, null));
+}
+
+var _default = LinkedIn;
+exports.default = _default;
+},{"react":"../../../node_modules/react/index.js","../assets/recommendationsList":"assets/recommendationsList.js"}],"assets/companyList.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
 var companyList = [{
   name: "Bombardier Aerospace",
   imageUrl: "https://www.bombardier.com/content/dam/Websites/bombardiercom/system/Bombardier_Logo.svg",
   url: "http://www.bombardier.com/",
   jobTitle: "Business Analyst/Full Stack Developer",
-  desc: "Front-End web development (jQuery,JavaScript) | Back-end data analysist (Python: Pandas, AWS S3) | Build, Testing, and Deployment (Azure DevOps)",
+  desc: "Front-End web development (jQuery,JavaScript) | Back-end data analyst (Python: Pandas, AWS S3) | Build, Testing, and Deployment (Azure DevOps)",
   length: "2019-2020"
 }, {
   name: "ST Engineering iDirect",
@@ -28356,19 +28444,39 @@ var companyList = [{
 }, {
   name: "Carleton University",
   imageUrl: "https://upload.wikimedia.org/wikipedia/en/thumb/f/f4/Carleton_University_logo.svg/330px-Carleton_University_logo.svg.png",
-  url: "https://www.idirect.net/",
+  url: "https://carleton.ca/",
   jobTitle: "Mathematics Teaching Assistant",
   desc: "Perform Adminstrative Duties | Teach Differential Equations/Multivariable Calculus/Laplace and Fourier Transforms",
   length: "2018-2019"
 }];
+var _default = companyList;
+exports.default = _default;
+},{}],"components/work.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _Navbar = _interopRequireDefault(require("./Navbar"));
+
+var _LinkedIn = _interopRequireDefault(require("./LinkedIn"));
+
+var _companyList = _interopRequireDefault(require("../assets/companyList"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function CompanyProfile(props) {
   return _react.default.createElement("div", {
     className: "companyProfile"
   }, _react.default.createElement("a", {
     href: props.url,
-    className: "logo"
+    className: "logoLink"
   }, _react.default.createElement("img", {
+    className: "logo",
     src: props.imageUrl,
     alt: props.name
   })), _react.default.createElement("h3", {
@@ -28381,7 +28489,7 @@ function CompanyProfile(props) {
 }
 
 function Main() {
-  var companyComponents = companyList.map(function (company) {
+  var companyComponents = _companyList.default.map(function (company) {
     return _react.default.createElement(CompanyProfile, {
       key: company.name,
       name: company.name,
@@ -28392,27 +28500,29 @@ function Main() {
       length: company.length
     });
   });
+
   return _react.default.createElement("div", {
     className: "main"
   }, companyComponents);
-}
+} //
+
 
 function WorkExperience() {
   return _react.default.createElement("div", {
     className: "layout"
-  }, _react.default.createElement(_Navbar.default, null), _react.default.createElement(Main, null));
+  }, _react.default.createElement(_Navbar.default, null), _react.default.createElement(_LinkedIn.default, null), _react.default.createElement(Main, null));
 }
 
 var _default = WorkExperience;
 exports.default = _default;
-},{"react":"../../node_modules/react/index.js","./components/Navbar":"components/Navbar.js"}],"index.js":[function(require,module,exports) {
+},{"react":"../../../node_modules/react/index.js","./Navbar":"components/Navbar.js","./LinkedIn":"components/LinkedIn.js","../assets/companyList":"assets/companyList.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
 
 var _reactDom = _interopRequireDefault(require("react-dom"));
 
-var _work = _interopRequireDefault(require("./work"));
+var _work = _interopRequireDefault(require("./components/work"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -28421,7 +28531,7 @@ var _window = window,
 $(document).ready(function () {
   _reactDom.default.render(_react.default.createElement(_work.default, null), document.getElementById("body"));
 });
-},{"react":"../../node_modules/react/index.js","react-dom":"../../node_modules/react-dom/index.js","./work":"work.js"}],"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"../../../node_modules/react/index.js","react-dom":"../../../node_modules/react-dom/index.js","./components/work":"components/work.js"}],"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -28449,7 +28559,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55018" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56358" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

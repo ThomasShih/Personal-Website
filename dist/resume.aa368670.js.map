@@ -1,1 +1,0 @@
-{"version":3,"sources":["js/resume.js"],"names":["window","anime"],"mappings":"cAAkBA;IAAVC,gBAAAA","file":"resume.aa368670.js","sourceRoot":"..","sourcesContent":["const { anime } = window;"]}
