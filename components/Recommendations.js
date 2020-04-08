@@ -20,16 +20,9 @@ function Recommendations(){
                                                                                                   text={recommendation.text}
                                                                                                   imgUrl={recommendation.imgUrl}/>)
   return(
-    <div>
+    <div className="aside">
       {recommendationsComponents}
     </div>
 )}
 
-function LinkedIn(){
-  return(
-    <div className="aside">
-      <Recommendations/>
-    </div>
-)}
-
-export default LinkedIn
+export default Recommendations

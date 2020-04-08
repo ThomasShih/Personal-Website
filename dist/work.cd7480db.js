@@ -28383,7 +28383,7 @@ var recommendationsList = [{
 }];
 var _default = recommendationsList;
 exports.default = _default;
-},{}],"components/LinkedIn.js":[function(require,module,exports) {
+},{}],"components/Recommendations.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -28427,16 +28427,12 @@ function Recommendations() {
     });
   });
 
-  return _react.default.createElement("div", null, recommendationsComponents);
-}
-
-function LinkedIn() {
   return _react.default.createElement("div", {
     className: "aside"
-  }, _react.default.createElement(Recommendations, null));
+  }, recommendationsComponents);
 }
 
-var _default = LinkedIn;
+var _default = Recommendations;
 exports.default = _default;
 },{"react":"../../../node_modules/react/index.js","../assets/recommendationsList":"assets/recommendationsList.js"}],"assets/companyList.js":[function(require,module,exports) {
 "use strict";
@@ -28522,7 +28518,82 @@ function CompaniesWorked() {
 
 var _default = CompaniesWorked;
 exports.default = _default;
-},{"react":"../../../node_modules/react/index.js","../assets/companyList":"assets/companyList.js"}],"components/work.js":[function(require,module,exports) {
+},{"react":"../../../node_modules/react/index.js","../assets/companyList":"assets/companyList.js"}],"components/IconLink.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function IconLink(props) {
+  return _react.default.createElement("a", {
+    href: props.url
+  }, _react.default.createElement("img", {
+    className: "icon",
+    src: props.logoUrl,
+    alt: props.alt
+  }));
+}
+
+var _default = IconLink;
+exports.default = _default;
+},{"react":"../../../node_modules/react/index.js"}],"components/ContactCard.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _IconLink = _interopRequireDefault(require("./IconLink"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var iconLinkList = [{
+  logoUrl: "https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg",
+  url: "https://www.linkedin.com/in/thomas-shih/",
+  alt: "LinkedIn"
+}, {
+  logoUrl: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+  url: "https://github.com/ThomasShih",
+  alt: "GitHub"
+}];
+var resumeSrc = "./assets/resume.pdf";
+
+function Resume() {
+  return _react.default.createElement("a", {
+    className: "resume",
+    href: resumeSrc,
+    download: true
+  }, _react.default.createElement("i", {
+    className: "fa fa-download fa-2x"
+  }, " Download Resume"));
+}
+
+function ContactCard() {
+  var iconLinks = iconLinkList.map(function (icon) {
+    return _react.default.createElement(_IconLink.default, {
+      key: icon.alt,
+      alt: icon.alt,
+      logoUrl: icon.logoUrl,
+      url: icon.url
+    });
+  });
+  return _react.default.createElement("div", {
+    className: "contactCard"
+  }, _react.default.createElement(Resume, null), iconLinks);
+}
+
+var _default = ContactCard;
+exports.default = _default;
+},{"react":"../../../node_modules/react/index.js","./IconLink":"components/IconLink.js"}],"components/work.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -28531,20 +28602,22 @@ var _reactDom = _interopRequireDefault(require("react-dom"));
 
 var _Navbar = _interopRequireDefault(require("./Navbar"));
 
-var _LinkedIn = _interopRequireDefault(require("./LinkedIn"));
+var _Recommendations = _interopRequireDefault(require("./Recommendations"));
 
 var _CompaniesWorked = _interopRequireDefault(require("./CompaniesWorked"));
+
+var _ContactCard = _interopRequireDefault(require("./ContactCard"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function WorkExperience() {
   return _react.default.createElement("div", {
     className: "layout"
-  }, _react.default.createElement(_Navbar.default, null), _react.default.createElement(_LinkedIn.default, null), _react.default.createElement(_CompaniesWorked.default, null));
+  }, _react.default.createElement(_Navbar.default, null), _react.default.createElement(_ContactCard.default, null), _react.default.createElement(_Recommendations.default, null), _react.default.createElement(_CompaniesWorked.default, null));
 }
 
 _reactDom.default.render(_react.default.createElement(WorkExperience, null), document.getElementById("body"));
-},{"react":"../../../node_modules/react/index.js","react-dom":"../../../node_modules/react-dom/index.js","./Navbar":"components/Navbar.js","./LinkedIn":"components/LinkedIn.js","./CompaniesWorked":"components/CompaniesWorked.js"}],"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"../../../node_modules/react/index.js","react-dom":"../../../node_modules/react-dom/index.js","./Navbar":"components/Navbar.js","./Recommendations":"components/Recommendations.js","./CompaniesWorked":"components/CompaniesWorked.js","./ContactCard":"components/ContactCard.js"}],"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -28572,7 +28645,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54503" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60938" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

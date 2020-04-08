@@ -1,5 +1,8 @@
-del .dist\*
+del .\dist\
 
-copy  .\assets\portraitCircle.svg .\dist\portraitCircle.svg
+mkdir .\dist\assets
+
+copy  .\assets\portraitCircle.svg .\dist\assets\portraitCircle.svg
+copy  .\assets\resume.pdf .\dist\assets\resume.pdf
 
 parcel index.html

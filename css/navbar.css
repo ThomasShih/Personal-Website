@@ -1,5 +1,5 @@
 .name{
-    font-size: 50px;
+    font-size: 7vh;
     color: #F2F3F6;
     font-weight: 700;
     text-decoration: none;
@@ -19,7 +19,7 @@
     margin-top: 25px;
     padding:5px;
     color:#F2F3F6;
-    font-size: 6vw;
+    font-size: 6vh;
     font-weight: 200;
     font-style: normal;
 }
@@ -41,7 +41,7 @@
         grid-template-columns: 1fr 1fr;
 }}
 
-@media (min-width:350px){
+@media (min-width:450px){
     .navLink{
         border: 1px solid #F2F3F6;
     }

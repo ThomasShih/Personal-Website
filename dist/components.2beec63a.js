@@ -28337,7 +28337,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function ProfileImg() {
   return _react.default.createElement("img", {
     className: "portrait",
-    src: "./portraitCircle.svg"
+    src: "./assets/portraitCircle.svg"
   });
 }
 
@@ -28405,7 +28405,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54503" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60938" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

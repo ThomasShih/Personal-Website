@@ -2,6 +2,29 @@ body{
     background-color: #3E688C;
 }
 
+.logo{
+    max-width: 100%;
+    object-fit: scale-down ;
+}
 
+@media (max-width:1000px){
+    .icon{
+        max-width: 26%;
+    }
+}
+
+@media (max-width:550px){
+    .icon{
+        max-width: 50%;
+    }
+}
+
+
+@media (min-width:1001px){
+    .icon{
+        max-width: 30%;
+        object-fit: scale-down ;
+    }
+}
 
 /*# sourceMappingURL=/stylesheet.727f2e5c.css.map */
