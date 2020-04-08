@@ -1,10 +1,10 @@
 var navbarLinks = [
     {
         name:"Work Experience",
-        href:""
+        href:"work.html"
     },{
-        name:"Hobbies and Project",
-        href:""}
+        name:"Hobbies and Projects",
+        href:"H_P.html"}
 ]
 
 export default navbarLinks

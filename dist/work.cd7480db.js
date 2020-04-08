@@ -28285,7 +28285,28 @@ if ("development" === 'production') {
 } else {
   module.exports = require('./cjs/react-dom.development.js');
 }
-},{"./cjs/react-dom.development.js":"../../../node_modules/react-dom/cjs/react-dom.development.js"}],"assets/navbarLinks.js":[function(require,module,exports) {
+},{"./cjs/react-dom.development.js":"../../../node_modules/react-dom/cjs/react-dom.development.js"}],"components/NavbarLinks.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function NavbarLinks(props) {
+  return _react.default.createElement("div", null, _react.default.createElement("a", {
+    className: "navLink",
+    href: "./" + props.href
+  }, props.name));
+}
+
+var _default = NavbarLinks;
+exports.default = _default;
+},{"react":"../../../node_modules/react/index.js"}],"assets/navbarLinks.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -28294,10 +28315,10 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 var navbarLinks = [{
   name: "Work Experience",
-  href: ""
+  href: "work.html"
 }, {
-  name: "Hobbies and Project",
-  href: ""
+  name: "Hobbies and Projects",
+  href: "H_P.html"
 }];
 var _default = navbarLinks;
 exports.default = _default;
@@ -28311,20 +28332,15 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
+var _NavbarLinks = _interopRequireDefault(require("./NavbarLinks"));
+
 var _navbarLinks = _interopRequireDefault(require("../assets/navbarLinks"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function NavbarLinks(props) {
-  return _react.default.createElement("div", null, _react.default.createElement("a", {
-    className: "navLink",
-    href: props.href
-  }, props.name));
-}
-
 function Navbar() {
   var navbarComponents = _navbarLinks.default.map(function (link) {
-    return _react.default.createElement(NavbarLinks, {
+    return _react.default.createElement(_NavbarLinks.default, {
       key: link.name,
       href: link.href,
       name: link.name
@@ -28333,9 +28349,11 @@ function Navbar() {
 
   return _react.default.createElement("div", {
     className: "navbar"
+  }, _react.default.createElement("a", {
+    href: "../index.html"
   }, _react.default.createElement("header", {
     className: "name"
-  }, "Thomas Shih"), _react.default.createElement("div", {
+  }, "Thomas Shih")), _react.default.createElement("div", {
     className: "navLinkTop"
   }, navbarComponents));
 }
@@ -28343,7 +28361,7 @@ function Navbar() {
 ;
 var _default = Navbar;
 exports.default = _default;
-},{"react":"../../../node_modules/react/index.js","../assets/navbarLinks":"assets/navbarLinks.js"}],"assets/recommendationsList.js":[function(require,module,exports) {
+},{"react":"../../../node_modules/react/index.js","./NavbarLinks":"components/NavbarLinks.js","../assets/navbarLinks":"assets/navbarLinks.js"}],"assets/recommendationsList.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -28525,9 +28543,7 @@ function WorkExperience() {
   }, _react.default.createElement(_Navbar.default, null), _react.default.createElement(_LinkedIn.default, null), _react.default.createElement(_CompaniesWorked.default, null));
 }
 
-$(document).ready(function () {
-  _reactDom.default.render(_react.default.createElement(WorkExperience, null), document.getElementById("body"));
-});
+_reactDom.default.render(_react.default.createElement(WorkExperience, null), document.getElementById("body"));
 },{"react":"../../../node_modules/react/index.js","react-dom":"../../../node_modules/react-dom/index.js","./Navbar":"components/Navbar.js","./LinkedIn":"components/LinkedIn.js","./CompaniesWorked":"components/CompaniesWorked.js"}],"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -28556,7 +28572,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55924" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54503" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

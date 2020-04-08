@@ -2,38 +2,6 @@ body{
     background-color: #3E688C;
 }
 
-div{
-    margin:0px;
-    padding:0px;
-    box-sizing: border-box;
-    text-align: center;
-    justify-content: center;
-}
-
-.name{
-    font-size: 50px;
-    color: #ffffff;
-    font-weight: 700;
-    text-decoration: none;
-    font-style: normal;
-    font-variant: normal;
-    text-transform: none;
-}
-
-.navbar{
-    grid-area:navbar;
-    justify-content: space-around;
-    background-color: #7B769E;
-}
-
-.navLink{
-    border: 1px solid #F2F3F6;
-    padding:5px;
-    color:#F2F3F6;
-    font-size: 35px;
-    font-weight: 200;
-    font-style: normal;
-}
 
 
 /*# sourceMappingURL=/stylesheet.727f2e5c.css.map */

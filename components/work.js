@@ -14,6 +14,4 @@ function WorkExperience(){
       </div>
 )}
 
-$(document).ready(function(){
-  ReactDOM.render(<WorkExperience/>,document.getElementById("body"))
-});
+ReactDOM.render(<WorkExperience/>,document.getElementById("body"))

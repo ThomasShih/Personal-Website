@@ -32,14 +32,17 @@
 .referenceName{
     grid-area:referenceName;
     color:#3E688C;
+    text-align: right;
 }
 .position{
     grid-area:position;
     color:#3E688C;
+    text-align: right;
 }
 .company{
     grid-area:company;
     color:#3E688C;
+    text-align: right;
 }
 
 .referenceText{
@@ -51,6 +54,8 @@
 .imgUrl{
     grid-area:imgUrl;
     border-radius: 50%;
+    width: 100%;
+    object-fit: scale-down ;
 }
 
 .recommendationCard{
@@ -87,6 +92,7 @@
 
         grid-template-rows: auto;
         grid-row-gap: 5px;
+        grid-column-gap: 5px;
         grid-template-areas: 
         "logo"
         "jobTitle"
@@ -108,16 +114,12 @@
 
         grid-template-columns: 2fr 4fr 1fr;
         grid-template-rows: 1fr 2fr;
+        grid-column-gap: 5px;
         grid-template-areas: 
         "logo jobTitle length"
         "logo desc     length";
     }
 
-    .navLinkTop{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-    
     .layout{
         display:grid;
         grid-template-rows: auto ;
@@ -128,5 +130,16 @@
     }
 }
 
+@media (max-width:400px){
+    .referenceName{
+        font-size: 1.3em;
+    }
+    .position{
+        font-size: 1em;
+    }
+    .company{
+        font-size: 1em;
+    }
+}
 
 /*# sourceMappingURL=/work.559356d7.css.map */

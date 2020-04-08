@@ -1,10 +1,7 @@
 import React from "react"
-import navbarLinks from "../assets/navbarLinks"
 
-function NavbarLinks(props){
-  return(
-    <div><a className="navLink" href={props.href}>{props.name}</a></div>
-)}
+import NavbarLinks from "./NavbarLinks"
+import navbarLinks from "../assets/navbarLinks"
 
 function Navbar(){
   const navbarComponents = navbarLinks.map(link => <NavbarLinks key={link.name}
@@ -12,9 +9,11 @@ function Navbar(){
                                                                 name={link.name}/>)
   return(
     <div className="navbar">
-      <header className="name">
-        Thomas Shih
-      </header>
+      <a href="../index.html">
+        <header className="name">
+            Thomas Shih
+        </header>
+      </a>
       <div className="navLinkTop">
         {navbarComponents}
       </div>

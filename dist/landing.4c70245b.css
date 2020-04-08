@@ -1,0 +1,63 @@
+*{
+    justify-content: center;
+    text-align: center;
+    padding-top: 10px;
+}
+
+html{
+    height:90vh;
+    display: flex;
+    align-items: center;
+}
+
+.name{
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    color: #F2F3F6;
+    letter-spacing: 2px;
+    word-spacing: 6px;
+    font-size:10vw;
+    font-weight: 400;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+}
+
+.navLink{
+    margin-top: 25px;
+    padding:5px;
+    color:#F2F3F6;
+    font-size: 6vw;
+    font-style: normal;
+    text-shadow: 9px 10px 10px rgba(71,29,136,0.5);
+}
+
+.navLink:hover{
+    text-shadow: 10px -10px 19px rgba(71,29,136,0.5), 10px 10px 19px rgba(71,29,136,0.5), -10px 10px 19px rgba(71,29,136,0.5), -10px -10px 19px rgba(71,29,136,0.5);
+}
+
+.portrait{
+    max-width:50vw;
+    max-height:40vh;
+}
+
+@media (min-width:900px){
+    .name{
+        font-size: 100px;
+    }
+}
+
+
+@media (min-width:1001px){
+    .navLinks{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .navLink{
+        text-decoration: none;
+        font-size:7vh;
+    }
+}
+
+
+/*# sourceMappingURL=/landing.4c70245b.css.map */
