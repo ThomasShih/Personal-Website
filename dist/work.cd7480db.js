@@ -28564,6 +28564,10 @@ var iconLinkList = [{
   logoUrl: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
   url: "https://github.com/ThomasShih",
   alt: "GitHub"
+}, {
+  logoUrl: "https://instagram-brand.com/wp-content/uploads/2016/11/Instagram_AppIcon_Aug2017.png?w=300",
+  url: "https://www.instagram.com/thomas__shih/",
+  alt: "Instagram"
 }];
 var resumeSrc = "./assets/resume.pdf";
 
@@ -28645,7 +28649,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60938" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60355" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

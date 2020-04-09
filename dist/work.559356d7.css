@@ -153,7 +153,7 @@ a{
         padding-right:2vw;
         align-items: center;
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(5, 1fr);
     }
 }
 
