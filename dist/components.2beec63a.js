@@ -30039,6 +30039,7 @@ var _animejs = _interopRequireDefault(require("animejs"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function animateButton(scale, duration, elasticity, elementID) {
+  console.log("triggered");
   var id = "#" + elementID;
 
   _animejs.default.remove(id);
@@ -30063,7 +30064,7 @@ function leaveButton(id) {
   animateButton(1.0, 600, 300, id);
 }
 
-;
+; // import {enterButton,leaveButton} from "../utilities/buttonEffects"
 },{"animejs":"../../../node_modules/animejs/lib/anime.es.js"}],"components/NavbarLinks.js":[function(require,module,exports) {
 "use strict";
 
@@ -30101,10 +30102,10 @@ var NavbarLinks =
 function (_React$Component) {
   _inherits(NavbarLinks, _React$Component);
 
-  function NavbarLinks(props) {
+  function NavbarLinks() {
     _classCallCheck(this, NavbarLinks);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(NavbarLinks).call(this));
+    return _possibleConstructorReturn(this, _getPrototypeOf(NavbarLinks).apply(this, arguments));
   }
 
   _createClass(NavbarLinks, [{
@@ -30306,7 +30307,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55257" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56487" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

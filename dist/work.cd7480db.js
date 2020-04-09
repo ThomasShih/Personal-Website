@@ -30039,6 +30039,7 @@ var _animejs = _interopRequireDefault(require("animejs"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function animateButton(scale, duration, elasticity, elementID) {
+  console.log("triggered");
   var id = "#" + elementID;
 
   _animejs.default.remove(id);
@@ -30063,7 +30064,7 @@ function leaveButton(id) {
   animateButton(1.0, 600, 300, id);
 }
 
-;
+; // import {enterButton,leaveButton} from "../utilities/buttonEffects"
 },{"animejs":"../../../node_modules/animejs/lib/anime.es.js"}],"components/NavbarLinks.js":[function(require,module,exports) {
 "use strict";
 
@@ -30101,10 +30102,10 @@ var NavbarLinks =
 function (_React$Component) {
   _inherits(NavbarLinks, _React$Component);
 
-  function NavbarLinks(props) {
+  function NavbarLinks() {
     _classCallCheck(this, NavbarLinks);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(NavbarLinks).call(this));
+    return _possibleConstructorReturn(this, _getPrototypeOf(NavbarLinks).apply(this, arguments));
   }
 
   _createClass(NavbarLinks, [{
@@ -30164,6 +30165,8 @@ var _NavbarLinks = _interopRequireDefault(require("./NavbarLinks"));
 
 var _navbarLinks = _interopRequireDefault(require("../assets/navbarLinks"));
 
+var _buttonEffects = require("../utilities/buttonEffects");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -30213,9 +30216,17 @@ function (_React$Component) {
         className: "navbar"
       }, _react.default.createElement("a", {
         href: "../index.html"
+      }, _react.default.createElement("button", {
+        id: "landingPage",
+        onMouseEnter: function onMouseEnter() {
+          (0, _buttonEffects.enterButton)("landingPage");
+        },
+        onMouseLeave: function onMouseLeave() {
+          (0, _buttonEffects.leaveButton)("landingPage");
+        }
       }, _react.default.createElement("header", {
         className: "name"
-      }, "Thomas Shih")), _react.default.createElement("div", {
+      }, "Thomas Shih"))), _react.default.createElement("div", {
         className: "navLinkTop"
       }, this.navbarComponents));
     }
@@ -30226,7 +30237,7 @@ function (_React$Component) {
 
 var _default = Navbar;
 exports.default = _default;
-},{"react":"../../../node_modules/react/index.js","./NavbarLinks":"components/NavbarLinks.js","../assets/navbarLinks":"assets/navbarLinks.js"}],"assets/recommendationsList.js":[function(require,module,exports) {
+},{"react":"../../../node_modules/react/index.js","./NavbarLinks":"components/NavbarLinks.js","../assets/navbarLinks":"assets/navbarLinks.js","../utilities/buttonEffects":"utilities/buttonEffects.js"}],"assets/recommendationsList.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -30361,6 +30372,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 var companyList = [{
+  id: "BBDAERO",
   name: "Bombardier Aerospace",
   imageUrl: "https://www.bombardier.com/content/dam/Websites/bombardiercom/system/Bombardier_Logo.svg",
   url: "http://www.bombardier.com/",
@@ -30368,6 +30380,7 @@ var companyList = [{
   desc: "Front-End web development (jQuery,JavaScript) | Back-end data analyst (Python: Pandas, AWS S3) | Build, Testing, and Deployment (Azure DevOps)",
   length: "2019-2020"
 }, {
+  id: "STENGIDIRECT",
   name: "ST Engineering iDirect",
   imageUrl: "https://www.idirect.net/wp-content/themes/idirect/icons/logo-color.svg",
   url: "https://www.idirect.net/",
@@ -30375,6 +30388,7 @@ var companyList = [{
   desc: "OSI Layer 2/3 bandwidth testing automation (Bash) | Feature Development and Bug-Fixing (C/C++: Socket)",
   length: "2018"
 }, {
+  id: "CARLETON",
   name: "Carleton University",
   imageUrl: "https://upload.wikimedia.org/wikipedia/en/thumb/f/f4/Carleton_University_logo.svg/330px-Carleton_University_logo.svg.png",
   url: "https://carleton.ca/",
@@ -30395,6 +30409,8 @@ exports.default = void 0;
 var _react = _interopRequireDefault(require("react"));
 
 var _companyList = _interopRequireDefault(require("../assets/companyList"));
+
+var _buttonEffects = require("../utilities/buttonEffects");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -30430,16 +30446,26 @@ function (_React$Component) {
   _createClass(CompanyProfile, [{
     key: "render",
     value: function render() {
+      var _this = this;
+
       return _react.default.createElement("div", {
         className: "companyProfile"
       }, _react.default.createElement("a", {
         href: this.props.url,
         className: "logoLink"
+      }, _react.default.createElement("button", {
+        id: this.props.id + "_icon",
+        onMouseEnter: function onMouseEnter() {
+          (0, _buttonEffects.enterButton)(_this.props.id + "_icon");
+        },
+        onMouseLeave: function onMouseLeave() {
+          (0, _buttonEffects.leaveButton)(_this.props.id + "_icon");
+        }
       }, _react.default.createElement("img", {
-        className: "logo",
+        className: "logoLink",
         src: this.props.imageUrl,
         alt: this.props.name
-      })), _react.default.createElement("h3", {
+      }))), _react.default.createElement("h3", {
         className: "jobTitle"
       }, this.props.jobTitle), _react.default.createElement("p", {
         className: "desc"
@@ -30458,14 +30484,15 @@ function (_React$Component2) {
   _inherits(CompaniesWorked, _React$Component2);
 
   function CompaniesWorked() {
-    var _this;
+    var _this2;
 
     _classCallCheck(this, CompaniesWorked);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(CompaniesWorked).call(this));
-    _this.companyComponents = _companyList.default.map(function (company) {
+    _this2 = _possibleConstructorReturn(this, _getPrototypeOf(CompaniesWorked).call(this));
+    _this2.companyComponents = _companyList.default.map(function (company) {
       return _react.default.createElement(CompanyProfile, {
-        key: company.name,
+        key: company.id,
+        id: company.id,
         name: company.name,
         imageUrl: company.imageUrl,
         url: company.url,
@@ -30474,7 +30501,7 @@ function (_React$Component2) {
         length: company.length
       });
     });
-    return _this;
+    return _this2;
   }
 
   _createClass(CompaniesWorked, [{
@@ -30482,7 +30509,7 @@ function (_React$Component2) {
     value: function render() {
       return _react.default.createElement("div", {
         className: "main"
-      }, this.companyComponents);
+      }, _react.default.createElement("h1", null, "Work Experience"), this.companyComponents);
     }
   }]);
 
@@ -30491,7 +30518,7 @@ function (_React$Component2) {
 
 var _default = CompaniesWorked;
 exports.default = _default;
-},{"react":"../../../node_modules/react/index.js","../assets/companyList":"assets/companyList.js"}],"components/IconLink.js":[function(require,module,exports) {
+},{"react":"../../../node_modules/react/index.js","../assets/companyList":"assets/companyList.js","../utilities/buttonEffects":"utilities/buttonEffects.js"}],"components/IconLink.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -30500,6 +30527,8 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
+
+var _buttonEffects = require("../utilities/buttonEffects");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -30535,13 +30564,23 @@ function (_React$Component) {
   _createClass(IconLink, [{
     key: "render",
     value: function render() {
+      var _this = this;
+
       return _react.default.createElement("a", {
         href: this.props.url
+      }, _react.default.createElement("button", {
+        id: this.props.id,
+        onMouseEnter: function onMouseEnter() {
+          (0, _buttonEffects.enterButton)(_this.props.id);
+        },
+        onMouseLeave: function onMouseLeave() {
+          (0, _buttonEffects.leaveButton)(_this.props.id);
+        }
       }, _react.default.createElement("img", {
         className: "icon",
         src: this.props.logoUrl,
         alt: this.props.alt
-      }));
+      })));
     }
   }]);
 
@@ -30550,7 +30589,7 @@ function (_React$Component) {
 
 var _default = IconLink;
 exports.default = _default;
-},{"react":"../../../node_modules/react/index.js"}],"assets/contactIcons.js":[function(require,module,exports) {
+},{"react":"../../../node_modules/react/index.js","../utilities/buttonEffects":"utilities/buttonEffects.js"}],"assets/contactIcons.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -30560,15 +30599,18 @@ exports.default = void 0;
 var iconLinkList = [{
   logoUrl: "https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg",
   url: "https://www.linkedin.com/in/thomas-shih/",
-  alt: "LinkedIn"
+  alt: "LinkedIn",
+  id: "LinkedInIcon"
 }, {
-  logoUrl: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+  logoUrl: "../assets/GitHubIcon.svg",
   url: "https://github.com/ThomasShih",
-  alt: "GitHub"
+  alt: "GitHub",
+  id: "GitHubIcon"
 }, {
   logoUrl: "https://instagram-brand.com/wp-content/uploads/2016/11/Instagram_AppIcon_Aug2017.png?w=300",
   url: "https://www.instagram.com/thomas__shih/",
-  alt: "Instagram"
+  alt: "Instagram",
+  id: "InstagramIcon"
 }];
 var _default = iconLinkList;
 exports.default = _default;
@@ -30585,6 +30627,8 @@ var _react = _interopRequireDefault(require("react"));
 var _IconLink = _interopRequireDefault(require("./IconLink"));
 
 var _contactIcons = _interopRequireDefault(require("../assets/contactIcons"));
+
+var _buttonEffects = require("../utilities/buttonEffects");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -30626,9 +30670,17 @@ function (_React$Component) {
         className: "resume",
         href: resumeSrc,
         download: true
+      }, _react.default.createElement("button", {
+        id: "resumeDownload",
+        onMouseEnter: function onMouseEnter() {
+          (0, _buttonEffects.enterButton)("resumeDownload");
+        },
+        onMouseLeave: function onMouseLeave() {
+          (0, _buttonEffects.leaveButton)("resumeDownload");
+        }
       }, _react.default.createElement("i", {
-        className: "fa fa-download fa-2x"
-      }, " Download Resume"));
+        className: "fa fa-download fa-3x"
+      }, " Download Resume")));
     }
   }]);
 
@@ -30648,7 +30700,8 @@ function (_React$Component2) {
     _this = _possibleConstructorReturn(this, _getPrototypeOf(ContactCard).call(this));
     _this.iconLinks = _contactIcons.default.map(function (icon) {
       return _react.default.createElement(_IconLink.default, {
-        key: icon.alt,
+        key: icon.id,
+        id: icon.id,
         alt: icon.alt,
         logoUrl: icon.logoUrl,
         url: icon.url
@@ -30671,7 +30724,7 @@ function (_React$Component2) {
 
 var _default = ContactCard;
 exports.default = _default;
-},{"react":"../../../node_modules/react/index.js","./IconLink":"components/IconLink.js","../assets/contactIcons":"assets/contactIcons.js"}],"components/work.js":[function(require,module,exports) {
+},{"react":"../../../node_modules/react/index.js","./IconLink":"components/IconLink.js","../assets/contactIcons":"assets/contactIcons.js","../utilities/buttonEffects":"utilities/buttonEffects.js"}],"components/work.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -30758,7 +30811,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55257" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56487" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

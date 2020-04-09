@@ -1,5 +1,21 @@
+:root {
+    --main-bg-color:#316cb3   ;
+    --main-text-color: white;
+    --component-bg-color: #c5d8ef ;
+}
+
 body{
-    background-color: #3E688C;
+    background-color: var(--main-bg-color);
+}
+
+button{
+    border:0;
+    background-color: transparent;
+    width: 100%;
+}
+
+button:focus{
+    outline:none;
 }
 
 .logo{
@@ -22,7 +38,7 @@ body{
 
 @media (min-width:1001px){
     .icon{
-        max-width: 30%;
+        max-width: 100%;
         object-fit: scale-down ;
     }
 }

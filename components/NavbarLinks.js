@@ -2,10 +2,6 @@ import React from "react"
 import {enterButton,leaveButton} from "../utilities/buttonEffects"
 
 class NavbarLinks extends React.Component{
-  constructor(props){
-    super()
-  };
-
   render(){
     return(
       <div>

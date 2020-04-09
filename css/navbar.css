@@ -1,6 +1,13 @@
+:root {
+    --main-bg-color:#316cb3   ;
+    --main-text-color: white;
+    --component-bg-color: #c5d8ef;
+    --nav-bg-color:#558dd1;
+}
+
 .name{
     font-size: 7vh;
-    color: #F2F3F6;
+    color: var(--main-text-color);
     font-weight: 700;
     text-decoration: none;
     font-style: normal;
@@ -12,15 +19,15 @@
 .navbar{
     grid-area:navbar;
     justify-content: space-around;
-    background-color: #7B769E;
+    background-color: var(--nav-bg-color);
 }
 
 .navLink{
     margin-top: 10px;
     margin-bottom: 10px;
     padding:5px;
-    color:#F2F3F6;
-    font-size: 6vh;
+    color:var(--main-text-color);
+    font-size: 5vh;
     font-weight: 200;
     font-style: normal;
     background-color: transparent;

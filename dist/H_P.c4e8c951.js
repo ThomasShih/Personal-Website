@@ -30039,6 +30039,7 @@ var _animejs = _interopRequireDefault(require("animejs"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function animateButton(scale, duration, elasticity, elementID) {
+  console.log("triggered");
   var id = "#" + elementID;
 
   _animejs.default.remove(id);
@@ -30063,7 +30064,7 @@ function leaveButton(id) {
   animateButton(1.0, 600, 300, id);
 }
 
-;
+; // import {enterButton,leaveButton} from "../utilities/buttonEffects"
 },{"animejs":"../../../node_modules/animejs/lib/anime.es.js"}],"components/NavbarLinks.js":[function(require,module,exports) {
 "use strict";
 
@@ -30101,10 +30102,10 @@ var NavbarLinks =
 function (_React$Component) {
   _inherits(NavbarLinks, _React$Component);
 
-  function NavbarLinks(props) {
+  function NavbarLinks() {
     _classCallCheck(this, NavbarLinks);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(NavbarLinks).call(this));
+    return _possibleConstructorReturn(this, _getPrototypeOf(NavbarLinks).apply(this, arguments));
   }
 
   _createClass(NavbarLinks, [{
@@ -30164,6 +30165,8 @@ var _NavbarLinks = _interopRequireDefault(require("./NavbarLinks"));
 
 var _navbarLinks = _interopRequireDefault(require("../assets/navbarLinks"));
 
+var _buttonEffects = require("../utilities/buttonEffects");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -30213,9 +30216,17 @@ function (_React$Component) {
         className: "navbar"
       }, _react.default.createElement("a", {
         href: "../index.html"
+      }, _react.default.createElement("button", {
+        id: "landingPage",
+        onMouseEnter: function onMouseEnter() {
+          (0, _buttonEffects.enterButton)("landingPage");
+        },
+        onMouseLeave: function onMouseLeave() {
+          (0, _buttonEffects.leaveButton)("landingPage");
+        }
       }, _react.default.createElement("header", {
         className: "name"
-      }, "Thomas Shih")), _react.default.createElement("div", {
+      }, "Thomas Shih"))), _react.default.createElement("div", {
         className: "navLinkTop"
       }, this.navbarComponents));
     }
@@ -30226,7 +30237,7 @@ function (_React$Component) {
 
 var _default = Navbar;
 exports.default = _default;
-},{"react":"../../../node_modules/react/index.js","./NavbarLinks":"components/NavbarLinks.js","../assets/navbarLinks":"assets/navbarLinks.js"}],"components/H_P.js":[function(require,module,exports) {
+},{"react":"../../../node_modules/react/index.js","./NavbarLinks":"components/NavbarLinks.js","../assets/navbarLinks":"assets/navbarLinks.js","../utilities/buttonEffects":"utilities/buttonEffects.js"}],"components/H_P.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -30307,7 +30318,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55257" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56487" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
