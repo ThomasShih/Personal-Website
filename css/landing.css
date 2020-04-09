@@ -30,6 +30,8 @@ html{
     font-size: 6vw;
     font-style: normal;
     text-shadow: 9px 10px 10px rgba(71,29,136,0.5);
+    background-color: transparent;
+    border: 0;
 }
 
 .navLink:hover{
@@ -46,7 +48,6 @@ html{
         font-size: 100px;
     }
 }
-
 
 @media (min-width:1001px){
     .navLinks{

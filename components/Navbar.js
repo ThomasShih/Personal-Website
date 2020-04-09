@@ -5,7 +5,8 @@ import navbarLinks from "../assets/navbarLinks"
 
 class Navbar extends React.Component{
   constructor(){super()
-  this.navbarComponents = navbarLinks.map(link => <NavbarLinks  key={link.name}
+  this.navbarComponents = navbarLinks.map(link => <NavbarLinks  key={link.id}
+                                                                id={link.id}
                                                                 href={link.href}
                                                                 name={link.name}/>)
   }

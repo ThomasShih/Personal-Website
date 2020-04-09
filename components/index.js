@@ -8,9 +8,11 @@ import ProfileImg from "./ProfileImg"
 
 class Landing extends React.Component{
     constructor(){super()
-      this.navbarComponents = navbarLinks.map(link => <NavbarLinks key={link.name}
-        href={"html/" + link.href}
-        name={link.name}/>)
+      this.navbarComponents = navbarLinks.map(link => <NavbarLinks  id={link.id}
+                                                                    key={link.name}
+                                                                    href={"html/" + link.href}
+                                                                    name={link.name}/>
+      )
     };
 
     render(){return(

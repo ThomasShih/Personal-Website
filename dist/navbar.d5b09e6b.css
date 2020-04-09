@@ -16,12 +16,14 @@
 }
 
 .navLink{
-    margin-top: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     padding:5px;
     color:#F2F3F6;
     font-size: 6vh;
     font-weight: 200;
     font-style: normal;
+    background-color: transparent;
 }
 
 @media (max-width:1000px){
@@ -41,10 +43,5 @@
         grid-template-columns: 1fr 1fr;
 }}
 
-@media (min-width:450px){
-    .navLink{
-        border: 1px solid #F2F3F6;
-    }
-}
 
 /*# sourceMappingURL=/navbar.d5b09e6b.css.map */
