@@ -1,8 +1,10 @@
 import React from "react"
 
-function NavbarLinks(props){
-  return(
-    <div><a className="navLink" href={"./" + props.href}>{props.name}</a></div>
-)}
+class NavbarLinks extends React.Component{
+  render(){
+    return(
+      <div><a className="navLink" href={"./" + this.props.href}>{this.props.name}</a></div>
+  )}
+}
 
 export default NavbarLinks

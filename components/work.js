@@ -6,7 +6,9 @@ import Recommendations from "./Recommendations"
 import CompaniesWorked from "./CompaniesWorked"
 import ContactCard from "./ContactCard"
 
-function WorkExperience(){
+class WorkExperience extends React.Component{
+  constructor(){super()}
+  render(){
     return(
       <div className="layout">
         <Navbar/>
@@ -14,6 +16,7 @@ function WorkExperience(){
         <Recommendations/>
         <CompaniesWorked/>
       </div>
-)}
+  )};
+}
 
 ReactDOM.render(<WorkExperience/>,document.getElementById("body"))
