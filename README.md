@@ -7,6 +7,9 @@ My school major did not stress how important a github/portfolio was for a softwa
 
 I have had experience using jQuery/Ajax/ and python to build a dashboard for my internship at Bombardier, I thought it might be worthwhile for me to focus on a web development project using the most popular technologies, such as React!
 
-Comments on improvements would be appercieated!
+Comments on improvements would be appreciated!
+
+Deployment and hosting on Netlify
+Domain DNS and servers by name.com
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b2c03c12-3ce5-42cd-9dc1-d42928286d86/deploy-status)](https://app.netlify.com/sites/thomasshih/deploys)
