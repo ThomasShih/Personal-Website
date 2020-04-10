@@ -12,6 +12,6 @@ Comments on improvements would be appreciated!
 Deployment and hosting on Netlify
 Domain DNS and servers by name.com
 
-Visit the website at <a href="thomasshih.codes">thomasshih.codes</a>!
+Visit the website at <a href="www.thomasshih.codes">www.thomasshih.codes</a>!
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b2c03c12-3ce5-42cd-9dc1-d42928286d86/deploy-status)](https://app.netlify.com/sites/thomasshih/deploys)
