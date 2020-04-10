@@ -1,5 +1,7 @@
 import Navbar from "./Navbar"
 import checkCDNexist from "../utilities/checkCDN"
+import ProjectList from "../components/Project"
+
 checkCDNexist();
 
 class HobbiesAndProjects extends React.Component{
@@ -8,7 +10,7 @@ class HobbiesAndProjects extends React.Component{
     return(
         <div className="layout">
           <Navbar/>
-          <h1> This page is currently in construction! Check back soon! </h1>
+          <ProjectList/>
         </div>
   )};
 }
