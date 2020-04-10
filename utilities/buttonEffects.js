@@ -1,4 +1,4 @@
-import anime from "animejs"
+const anime = window.anime
 function animateButton(scale, duration, elasticity,elementID){
     console.log("triggered")
     var id = "#" + elementID;
