@@ -1,5 +1,3 @@
-import React from "react"
-
 class ProfileImg extends React.Component{
   render(){
     return(

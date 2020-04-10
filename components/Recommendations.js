@@ -1,4 +1,3 @@
-import React from "react"
 import recommendationsList from "../assets/recommendationsList"
 
 class RecommendationCard extends React.Component{
