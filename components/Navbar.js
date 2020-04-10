@@ -1,6 +1,7 @@
 import NavbarLinks from "./NavbarLinks"
 import navbarLinks from "../assets/navbarLinks"
 import {enterButton,leaveButton} from "../utilities/buttonEffects"
+import {popIn} from "../utilities/pop"
 
 class Navbar extends React.Component{
   constructor(){super()
@@ -9,9 +10,15 @@ class Navbar extends React.Component{
                                                                 href={link.href}
                                                                 name={link.name}/>)
   }
+
+  componentDidMount(){
+    popIn("navbar")
+    popIn("landingPage")
+  }
+
   render(){
     return(
-      <div className="navbar">
+      <div id="navbar" className="navbar">
         <a href="../index.html">
           <button id="landingPage"
                   onMouseEnter={() => {enterButton("landingPage")}}

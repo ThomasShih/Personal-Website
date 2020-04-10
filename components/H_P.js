@@ -1,4 +1,6 @@
 import Navbar from "./Navbar"
+import checkCDNexist from "../utilities/checkCDN"
+checkCDNexist();
 
 class HobbiesAndProjects extends React.Component{
   constructor(){super()};

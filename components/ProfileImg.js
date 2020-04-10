@@ -1,7 +1,7 @@
 class ProfileImg extends React.Component{
   render(){
     return(
-      <img className="portrait" src="./assets/portraitCircle.svg"></img>
+      <img className="portrait" id="landingPotrait" src="./assets/portraitCircle.svg"></img>
   )}
 }
 

@@ -10,7 +10,7 @@ class ResumeDownload extends React.Component{
         <button id="resumeDownload"
                 onMouseEnter={() => {enterButton("resumeDownload")}}
                 onMouseLeave={() => {leaveButton("resumeDownload")}}>
-          <i className="fa fa-download fa-3x"> Download Resume</i>
+          <i className="fa fa-download fa-2x"> Download Resume</i>
         </button>
       </a>
   )}
