@@ -1,7 +1,7 @@
 import IconLink from "./IconLink"
 import iconLinkList from "../assets/contactIcons"
 import {enterButton,leaveButton} from "../utilities/buttonEffects"
-const resumeSrc = "./assets/resume.pdf"
+const resumeSrc = "../assets/resume.pdf"
 
 class ResumeDownload extends React.Component{
   render(){
