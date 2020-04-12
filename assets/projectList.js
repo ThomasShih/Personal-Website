@@ -12,7 +12,7 @@ const projectList = [
     {
         id:"redditLocationParser",
         name:"Location List Generator from Reddit Posts",
-        desc:"A script to generate a data file of destinations mentioned from a given Reddit thread, the script fetches the thread from the Reddit API and then utilizes a Natural Language Processing Libary to extract keywords related to Locations. The extracted keywords is then queried with a geocoder to get map data.",
+        desc:"A script to generate a data file of destinations mentioned from a given Reddit thread. The script fetches the thread replies using the Reddit API and then utilizes a Natural Language Processing Libary to extract keywords related to Locations. The extracted keywords is then queried with a geocoder to get map data.",
         gitHub:"https://github.com/ThomasShih/Reddit-Thread-Location-Parser",
         video:null,
         length:"Ongoing",
