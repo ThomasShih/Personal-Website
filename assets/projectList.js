@@ -13,7 +13,7 @@ const projectList = [
         id:"sortingAlgos",
         name:"Basic Sorting Algorithim Handbook",
         desc:"A simple website displaying animations of sorting algorithims in action. The animations are new for each page load as a new array of randomized numbers are generated and processed through each sort. This is all done using JavaScript the animations processed using React.",
-        gitHub:"https://github.com/ThomasShih/Reddit-Thread-Location-Parser",
+        gitHub:"https://github.com/ThomasShih/algorithims",
         video:null,
         length:"Ongoing",
         picture:"https://image.flaticon.com/icons/svg/2103/2103620.svg",
