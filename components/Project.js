@@ -1,6 +1,7 @@
 import projectList from "../assets/projectList"
 import iconLinkList from "../assets/contactIcons"
 import IconLink from "./IconLink"
+import {enterButton,leaveButton} from "../utilities/buttonEffects"
 import YouTubePlayer  from "react-player/lib/players/YouTube"
 
 const gitHubIcon = iconLinkList[1].logoUrl
@@ -34,8 +35,11 @@ class Project extends React.Component{
       return(
           <div className="ProjectCard">
             <h1 className="projectName">{this.props.name}</h1>
-            <p className="desc">{this.props.desc}</p>
-            <h5 className="length">Time Spent: {this.props.length}</h5>
+            <p className="desc">
+              {this.props.desc}
+              {this.props.link!=undefined &&  <div><br/><a href={this.props.link}>Visit This Project!</a></div>}
+            </p>
+            <h5 className="length">Status: {this.props.length}</h5>
             <Media video={this.props.video} picture={this.props.picture}/>
             <ul className="keywords">{this.keywords}</ul>
             <IconLink className="gitHub"
@@ -43,6 +47,7 @@ class Project extends React.Component{
                       id={this.props.id + "icon"}
                       logoUrl={gitHubIcon}
                       alt="GitHub"/>
+            {this.props.attribution!=undefined && <h6>{this.props.attribution}</h6>}
           </div>
     )};
   }
@@ -57,6 +62,8 @@ class ProjectList extends React.Component{
                                                               picture={project.picture}
                                                               keywords={project.keywords}
                                                               length={project.length}
+                                                              attribution={project.attribution}
+                                                              link={project.link}
                                                               video={project.video}/>))
     };
     render(){
