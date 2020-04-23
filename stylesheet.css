@@ -4,7 +4,7 @@
     --component-bg-color: #c5d8ef ;
 }
 
-body{
+html body{
     background-color: var(--main-bg-color);
 }
 

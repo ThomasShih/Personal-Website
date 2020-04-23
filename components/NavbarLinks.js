@@ -10,17 +10,16 @@ function removeScreen(redirectID){
   }
 }
 
-class NavbarLinks extends React.Component{
-  render(){
-    return(
-      <button className="navLink"
-              onClick     = {() => {removeScreen(this.props.href)}}
-              onMouseEnter= {() => {enterButton(this.props.id)}}
-              onMouseLeave= {() => {leaveButton(this.props.id)}}
-              id={this.props.id}>
-                {this.props.name}
-      </button>
-  )};
+function NavbarLinks(props){
+  return(
+    <button className="navLink"
+            onClick     = {() => {removeScreen(props.data.href)}}
+            onMouseEnter= {() => {enterButton(props.data.id)}}
+            onMouseLeave= {() => {leaveButton(props.data.id)}}
+            id={props.data.id}>
+      {props.data.name}
+    </button>
+  )
 }
 
 export default NavbarLinks

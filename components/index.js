@@ -4,32 +4,31 @@ import ProfileImg from "./ProfileImg"
 
 import {popIn} from "../utilities/pop.js"
 import checkCDNexist from "../utilities/checkCDN"
-checkCDNexist();
 
-class Landing extends React.Component{
-    constructor(){super()
-      this.navbarComponents = navbarLinks.map(link => <NavbarLinks  id={link.id}
-                                                                    key={link.name}
-                                                                    href={"html/" + link.href}
-                                                                    name={link.name}/>
-      )
-    };
+function Landing(){
+  const navbarComponents = navbarLinks.map(link => <NavbarLinks id={link.id}
+                                                                data= {{
+                                                                        key:link.name,
+                                                                        href:"html/" + link.href,
+                                                                        name:link.name,
+                                                                      }}/>)
 
-    componentDidMount(){
-      navbarLinks.map(link => {popIn(link.id)})
-      popIn("landingPotrait")
-      popIn("name")
-    }
+  React.useEffect(() => {
+                          checkCDNexist()
+                          navbarLinks.map(link => {popIn(link.id)})
+                          popIn("landingPotrait")
+                          popIn("name")
+                        },[])
 
-    render(){return(
-              <div className="landing">
-                <div className="name" id="name"> Thomas Shih </div>
-                <ProfileImg/>
-                <div className="navLinks">
-                    {this.navbarComponents}
-                </div>
-              </div>
-    )};
+  return(
+          <div className="landing">
+            <div className="name" id="name"> Thomas Shih </div>
+            <ProfileImg/>
+            <div className="navLinks">
+                {navbarComponents}
+            </div>
+          </div>
+        )
 }
 
 ReactDOM.render(<Landing/>,document.getElementById("body"))
