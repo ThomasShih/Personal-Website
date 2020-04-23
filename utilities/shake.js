@@ -1,11 +1,12 @@
+import {lockElement,unlockElement} from "./elementLock"
+
 function shake(elementID,intensity){
-  if(elementID === "*"){
-    var id = elementID;
-  }else{
-    var id = "#" + elementID;
-  }
+  //setup
+  if(lockElement(elementID) == false){return}
+  var id = "#" + elementID;
   const originalElementColor = document.getElementById(elementID).style.color
 
+  //processing
   anime.remove(id);
   anime({
     targets: id,
@@ -20,7 +21,10 @@ function shake(elementID,intensity){
               ],
     easing: 'easeInOutQuad',
     changeBegin   : ()=>{document.getElementById(elementID).style.color= "rgba(255, 0, 0, 0.7)"},
-    changeComplete: ()=>{document.getElementById(elementID).style.color= originalElementColor},
+    changeComplete: ()=>{
+                         document.getElementById(elementID).style.color= originalElementColor;
+                         unlockElement(elementID)
+                        },
   });
 };
 

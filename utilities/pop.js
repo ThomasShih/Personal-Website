@@ -1,4 +1,8 @@
+import {lockElement,unlockElement} from "./elementLock"
+
 function pop(elementID, duration, elasticity,scale,opacity,callback=undefined){
+  //setup
+  if(lockElement(elementID) == false){return}
   if(callback === undefined){
     callback = ()=>{return}
   }
@@ -14,8 +18,11 @@ function pop(elementID, duration, elasticity,scale,opacity,callback=undefined){
     opacity: opacity,
     scale: scale,
     duration: duration,
-    changeComplete: callback,
-    easing: 'easeInOutQuad'
+    easing: 'easeInOutQuad',
+    changeComplete: ()=>{
+                          callback
+                          id.includes("#") && unlockElement(elementID);
+                        },
   });
 };
 
