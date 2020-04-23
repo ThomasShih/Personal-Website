@@ -2,22 +2,22 @@ import {enterButton,leaveButton} from "../utilities/buttonEffects"
 import {popOut} from "../utilities/pop"
 import {shake} from "../utilities/shake"
 
-function removeScreen(redirectID){
+function removeScreen(redirectID,buttonID){
   if(window.location.href.includes(redirectID)){
-    shake("*",2)
+    shake(buttonID,2)
   }else{
     popOut("*",() => {window.location.href = "./" + redirectID});
   }
 }
 
-function NavbarLinks(props){
+function NavbarLinks({data}){
   return(
     <button className="navLink"
-            onClick     = {() => {removeScreen(props.data.href)}}
-            onMouseEnter= {() => {enterButton(props.data.id)}}
-            onMouseLeave= {() => {leaveButton(props.data.id)}}
-            id={props.data.id}>
-      {props.data.name}
+            onClick     = {() => {removeScreen(data.href,data.id)}}
+            onMouseEnter= {() => {enterButton(data.id)}}
+            onMouseLeave= {() => {leaveButton(data.id)}}
+            id={data.id}>
+      {data.name}
     </button>
   )
 }

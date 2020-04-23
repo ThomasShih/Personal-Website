@@ -1,27 +1,28 @@
-function shake(elementID,amount){
-    if(elementID === "*"){
-      var id = elementID;
-    }else{
-      var id = "#" + elementID;
-    }
-  
-    anime.remove(id);
-    anime({
-      targets: id,
-      duration: 100,
-      keyframes:[
-                    {translateX:amount},
-                    {translateX:-1*amount},
-                    {translateX:amount},
-                    {translateX:-1*amount},
-                    {translateX:amount},
-                    {translateX:0}
-                ],
-      easing: 'easeInOutQuad',
-      changeBegin   : ()=>{document.getElementsByTagName("BODY")[0].style.overflow= "hidden"},
-      changeComplete: ()=>{document.getElementsByTagName("BODY")[0].style.overflow= "auto"},
-    });
-  };
+function shake(elementID,intensity){
+  if(elementID === "*"){
+    var id = elementID;
+  }else{
+    var id = "#" + elementID;
+  }
+  const originalElementColor = document.getElementById(elementID).style.color
+
+  anime.remove(id);
+  anime({
+    targets: id,
+    duration: 500,
+    keyframes:[
+                  {translateX:intensity},
+                  {translateX:-1*intensity},
+                  {translateX:intensity},
+                  {translateX:-1*intensity},
+                  {translateX:intensity},
+                  {translateX:0}
+              ],
+    easing: 'easeInOutQuad',
+    changeBegin   : ()=>{document.getElementById(elementID).style.color= "rgba(255, 0, 0, 0.7)"},
+    changeComplete: ()=>{document.getElementById(elementID).style.color= originalElementColor},
+  });
+};
 
 export {shake}
 
