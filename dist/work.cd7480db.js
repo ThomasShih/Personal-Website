@@ -127,8 +127,9 @@ exports.enterButton = enterButton;
 exports.leaveButton = leaveButton;
 
 function animateButton(scale, duration, elasticity, elementID) {
-  var id = "#" + elementID;
-  anime.remove(id);
+  //setup
+  var id = "#" + elementID; //processing
+
   anime({
     targets: id,
     scale: scale,
@@ -162,6 +163,7 @@ exports.popOut = popOut;
 function pop(elementID, duration, elasticity, scale, opacity) {
   var callback = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : undefined;
 
+  //setup
   if (callback === undefined) {
     callback = function callback() {
       return;
@@ -172,16 +174,16 @@ function pop(elementID, duration, elasticity, scale, opacity) {
     var id = elementID;
   } else {
     var id = "#" + elementID;
-  }
+  } //processing
 
-  anime.remove(id);
+
   anime({
     targets: id,
     opacity: opacity,
     scale: scale,
     duration: duration,
-    changeComplete: callback,
-    easing: 'easeInOutQuad'
+    easing: 'easeInOutQuad',
+    changeComplete: callback
   });
 }
 
@@ -206,36 +208,37 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.shake = shake;
 
-function shake(elementID, amount) {
-  if (elementID === "*") {
-    var id = elementID;
-  } else {
-    var id = "#" + elementID;
-  }
+function shake(elementID, intensity) {
+  //setup
+  var id = "#" + elementID;
+  var originalElementColor = document.getElementById(elementID).style.color; //processing
 
-  anime.remove(id);
   anime({
     targets: id,
-    duration: 100,
+    duration: 500,
     keyframes: [{
-      translateX: amount
+      translateX: intensity
     }, {
-      translateX: -1 * amount
+      translateX: -1 * intensity
     }, {
-      translateX: amount
+      translateX: intensity
     }, {
-      translateX: -1 * amount
+      translateX: -1 * intensity
     }, {
-      translateX: amount
+      translateX: intensity
+    }, {
+      translateX: -1 * intensity
+    }, {
+      translateX: intensity
     }, {
       translateX: 0
     }],
     easing: 'easeInOutQuad',
     changeBegin: function changeBegin() {
-      document.getElementsByTagName("BODY")[0].style.overflow = "hidden";
+      document.getElementById(elementID).style.color = "rgba(255, 0, 0, 0.7)";
     },
     changeComplete: function changeComplete() {
-      document.getElementsByTagName("BODY")[0].style.overflow = "auto";
+      document.getElementById(elementID).style.color = originalElementColor;
     }
   });
 }
@@ -255,9 +258,9 @@ var _pop = require("../utilities/pop");
 
 var _shake = require("../utilities/shake");
 
-function removeScreen(redirectID) {
+function removeScreen(redirectID, buttonID) {
   if (window.location.href.includes(redirectID)) {
-    (0, _shake.shake)("*", 2);
+    (0, _shake.shake)(buttonID, 2);
   } else {
     (0, _pop.popOut)("*", function () {
       window.location.href = "./" + redirectID;
@@ -265,20 +268,21 @@ function removeScreen(redirectID) {
   }
 }
 
-function NavbarLinks(props) {
+function NavbarLinks(_ref) {
+  var data = _ref.data;
   return React.createElement("button", {
     className: "navLink",
     onClick: function onClick() {
-      removeScreen(props.data.href);
+      removeScreen(data.href, data.id);
     },
     onMouseEnter: function onMouseEnter() {
-      (0, _buttonEffects.enterButton)(props.data.id);
+      (0, _buttonEffects.enterButton)(data.id);
     },
     onMouseLeave: function onMouseLeave() {
-      (0, _buttonEffects.leaveButton)(props.data.id);
+      (0, _buttonEffects.leaveButton)(data.id);
     },
-    id: props.data.id
-  }, props.data.name);
+    id: data.id
+  }, data.name);
 }
 
 var _default = NavbarLinks;
@@ -698,7 +702,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62637" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63791" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

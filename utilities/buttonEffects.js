@@ -1,16 +1,13 @@
-import { lockElement,unlockElement } from "./elementLock";
-
 function animateButton(scale, duration, elasticity,elementID){
   //setup
-  if(lockElement(elementID) == false){return}
   var id = "#" + elementID;
-  anime.remove(id);
+
+  //processing
   anime({
     targets: id,
     scale: scale,
     duration: duration,
     elasticity: elasticity,
-    changeComplete: () => unlockElement(elementID),
   });
 };
 
