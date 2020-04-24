@@ -1,4 +1,4 @@
-del /F /Q .\dist\
+del /F .\dist
 
 mkdir .\dist\assets
 
