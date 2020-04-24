@@ -5,8 +5,8 @@ var navbarLinks = [
         id:"workLink"
     },{
         name:"Hobbies and Projects",
-        href:"H_P.html",
-        id:"H_PLink"
+        href:"projects.html",
+        id:"projectLink"
     }
 ]
 export default navbarLinks
