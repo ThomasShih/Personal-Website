@@ -1,3 +1,6 @@
+import React from "react"
+import ReactDOM from "react-dom"
+
 import Navbar from "./Navbar"
 import Recommendations from "./Recommendations"
 import CompaniesWorked from "./CompaniesWorked"

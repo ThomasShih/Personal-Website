@@ -1,3 +1,5 @@
+import React from "react"
+
 import projectList from "../assets/projectList"
 import iconLinkList from "../assets/contactIcons"
 import IconLink from "./IconLink"

@@ -1,3 +1,6 @@
+import React from "react"
+import ReactDOM from "react-dom"
+
 import NavbarLinks from "./NavbarLinks"
 import navbarLinks from "../assets/navbarLinks"
 import ProfileImg from "./ProfileImg"

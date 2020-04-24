@@ -1,3 +1,6 @@
+import React from "react"
+import ReactDOM from "react-dom"
+
 import Navbar from "./Navbar"
 import checkCDNexist from "../utilities/checkCDN"
 import ProjectList from "./Project"
