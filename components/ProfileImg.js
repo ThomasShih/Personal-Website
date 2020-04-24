@@ -1,7 +1,2 @@
-function ProfileImg(){
-  return(
-    <img className="portrait" id="landingPotrait" src="./assets/portraitCircle.svg"></img>
-  )
-}
-
+const ProfileImg = () => <img className="portrait" id="landingPotrait" src="./assets/portraitCircle.svg"></img>
 export default ProfileImg
