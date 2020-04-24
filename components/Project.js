@@ -1,5 +1,3 @@
-import React from "react"
-
 import projectList from "../javaScriptAssets/projectList"
 import iconLinkList from "../javaScriptAssets/contactIcons"
 import IconLink from "./IconLink"

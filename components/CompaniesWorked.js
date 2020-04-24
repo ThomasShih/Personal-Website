@@ -1,5 +1,3 @@
-import React from "react"
-
 import companyList from "../javaScriptAssets/companyList"
 import {enterButton,leaveButton} from "../utilities/buttonEffects"
 

@@ -1,5 +1,3 @@
-import React from "react"
-
 import {enterButton,leaveButton} from "../utilities/buttonEffects"
 import {popOut} from "../utilities/pop"
 import {shake} from "../utilities/shake"

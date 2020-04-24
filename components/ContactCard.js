@@ -1,5 +1,3 @@
-import React from "react"
-
 import IconLink from "./IconLink"
 import iconLinkList from "../javaScriptAssets/contactIcons"
 import {enterButton,leaveButton} from "../utilities/buttonEffects"
