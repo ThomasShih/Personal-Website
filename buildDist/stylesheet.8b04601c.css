@@ -1,0 +1,2 @@
+:root{--main-bg-color:#316cb3;--main-text-color:#fff;--component-bg-color:#c5d8ef}*{margin:0;text-align:center}html body{background-color:var(--main-bg-color)}button{border:0;background-color:transparent;width:100%}button:focus{outline:none}.logo{max-width:100%;object-fit:scale-down}@media (max-width:1000px){.icon{max-width:26%}}@media (max-width:550px){.icon{max-width:50%}}@media (min-width:1001px){.icon{max-width:100%;object-fit:scale-down}}
+/*# sourceMappingURL=/stylesheet.8b04601c.css.map */
