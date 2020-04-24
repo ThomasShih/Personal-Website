@@ -2,8 +2,10 @@ function shake(elementID,intensity){
   //setup
   var id = "#" + elementID;
   const originalElementColor = document.getElementById(elementID).style.color
+  document.getElementById(elementID).setAttribute("originalColor",originalElementColor) //place this color attribute in the element as an interupting this animation means the color wont be set
 
   //processing
+  anime.remove(id);
   anime({
     targets: id,
     duration: 500,
@@ -19,7 +21,7 @@ function shake(elementID,intensity){
               ],
     easing: 'easeInOutQuad',
     changeBegin   : ()=>{document.getElementById(elementID).style.color= "rgba(255, 0, 0, 0.7)"},
-    changeComplete: ()=>{document.getElementById(elementID).style.color= originalElementColor},
+    changeComplete: ()=>{document.getElementById(elementID).style.color= document.getElementById(elementID).getAttribute("originalColor")},
   });
 };
 

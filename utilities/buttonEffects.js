@@ -1,18 +1,22 @@
 function animateButton(scale, duration, elasticity,elementID){
   //setup
-  var id = "#" + elementID;
+  const id = "#" + elementID;
+  const originalColor = document.getElementById(elementID).getAttribute("originalColor")
 
   //processing
+  anime.remove(id);
   anime({
     targets: id,
     scale: scale,
     duration: duration,
-    elasticity: elasticity,
+    easing: 'easeInOutExpo',
+    elasticity:elasticity,
+    changeComplete: ()=>{if(originalColor!=undefined){document.getElementById(elementID).style.color= originalColor}},
   });
 };
 
-function enterButton(id){animateButton(1.1, 800, 400,id)};
-function leaveButton(id){animateButton(1.0, 600, 300,id)};
+function enterButton(id){animateButton(1.1, 200, 400,id)};
+function leaveButton(id){animateButton(1.0, 200, 100,id)};
 
 export {enterButton,leaveButton}
 

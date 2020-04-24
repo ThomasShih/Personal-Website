@@ -4,10 +4,6 @@
     --component-bg-color: #8a9db4 ;
 }
 
-a{
-    text-align: center;
-}
-
 .main{
     grid-area:main;
     background-color: var(--component-bg-color);
@@ -30,6 +26,15 @@ a{
 .resume{
     grid-column:1/3;
     grid-row:1;
+}
+.workExperienceHeader{
+    padding:30px;
+    color:var(--main-bg-color);
+    border-bottom: 2px dotted var(--main-bg-color);
+
+    font-family: "Times New Roman", Times, serif;
+    font-size: 40px;
+    font-weight: 700;
 }
 .jobTitle{
     grid-area:jobTitle;
@@ -57,12 +62,6 @@ a{
     color:var(--main-bg-color);
     text-align: right;
 }
-.referenceText{
-    grid-area:referenceText;
-    font-family: "Times New Roman", Times, serif;
-    font-style: italic;
-    padding-top:5px;
-}
 .imgUrl{
     grid-area:imgUrl;
     border-radius: 50%;
@@ -80,7 +79,7 @@ a{
     display: grid;
 
     grid-template-rows: auto;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 100px 3fr;
 
     grid-template-areas: 
     "imgUrl referenceName"
@@ -88,6 +87,26 @@ a{
     "imgUrl company"
     "referenceText referenceText";
 }
+.referenceName{
+    font-size: 2em;
+    font-weight: 900;
+}
+.position{
+    font-size: 1.5em;
+    font-weight: 900;
+}
+.company{
+    font-size: 1.5em;
+    font-weight: 900;
+}
+.referenceText{
+    grid-area:referenceText;
+    font-family: "Times New Roman", Times, serif;
+    font-style: italic;
+    font-size: 1.5em;
+    padding-top:20px;
+}
+
 @media (max-width:1000px){
     .main{
         margin-right: 15px;
@@ -126,13 +145,21 @@ a{
         display: grid;
         grid-row-gap: 10px;
     }
+
+    #resumeDownload{
+        color:var(--main-bg-color);
+        font-family: "Times New Roman", Times, serif;
+        font-size: 20px;
+        font-weight: 500;
+    }
 }
 
 @media (min-width:1001px){
     .companyProfile{
+        padding: 10px;
         align-items: center;
         display: grid;
-        grid-template-columns: 2fr 4fr 1fr;
+        grid-template-columns: 3fr 5fr 1fr;
         grid-template-rows: 1fr 2fr;
         grid-column-gap: 5px;
         grid-template-areas: 
@@ -162,12 +189,19 @@ a{
         padding-right:2vw;
         align-items: center;
         display: grid;
-        grid-template-columns: 1fr 1fr repeat(3, 70px);
+        grid-template-columns: 1fr 1fr repeat(3, 4vw);
         grid-column-gap: 60px;
     }
 
     .referenceText{
-        font-size: 1vw;
+        font-size: 20px;
+    }
+
+    #resumeDownload{
+        color:var(--main-bg-color);
+        font-family: "Times New Roman", Times, serif;
+        font-size: 30px;
+        font-weight: 500;
     }
 }
 
@@ -181,11 +215,4 @@ a{
     .company{
         font-size: 1em;
     }
-}
-
-h1{
-    text-align: center;
-    color: var(--main-bg-color);
-    padding:20px;
-    border-bottom: 1px solid var(--main-text-color);
 }

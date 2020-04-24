@@ -20,9 +20,7 @@ function Navbar(){
             <header className="name">Thomas Shih</header>
         </button>
       </a>
-      <div className="navLinkTop">
-        {navbarComponents}
-      </div>
+      {navbarComponents}
     </div>
   )
 }

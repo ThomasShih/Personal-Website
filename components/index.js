@@ -8,6 +8,7 @@ import checkCDNexist from "../utilities/checkCDN"
 function Landing(){
   const navbarComponents = navbarLinks.map(link => <NavbarLinks id={link.id}
                                                                 data= {{
+                                                                        id:link.id,
                                                                         key:link.name,
                                                                         href:"html/" + link.href,
                                                                         name:link.name,

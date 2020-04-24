@@ -4,10 +4,10 @@ function RecommendationCard({data}){
   return(
     <div className="recommendationCard">
       <img className="imgUrl" src={data.imgUrl} alt="can't find image"></img>
-      <h3 className="referenceName">{data.name}</h3>
-      <h4 className="position">{data.position}</h4>
-      <h4 className="company">{data.company}</h4>
-      <p  className="referenceText">{data.text}</p>
+      <div className="referenceName">{data.name}</div>
+      <div className="position">{data.position}</div>
+      <div className="company">{data.company}</div>
+      <div  className="referenceText">{data.text}</div>
     </div>
   )
 }

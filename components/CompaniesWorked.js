@@ -11,9 +11,9 @@ function CompanyProfile(props){
               <img className="logoLink" src={props.data.imageUrl} alt={props.data.name}></img>
             </button>
         </a>
-        <h3 className="jobTitle">{props.data.jobTitle}</h3>
-        <p className="desc">{props.data.desc}</p>
-        <h4 className="length">{props.data.length}</h4>
+        <h2 className="jobTitle">{props.data.jobTitle}</h2>
+        <h3 className="desc">{props.data.desc}</h3>
+        <h2 className="length">{props.data.length}</h2>
     </div> )
 }
 
@@ -23,7 +23,7 @@ function CompaniesWorked(){
                                                                         data    ={company}/>)
   return(
     <div className="main">
-      <h1>Work Experience</h1>
+      <div className="workExperienceHeader">Work Experience</div>
       {companyComponents}
     </div>
   )

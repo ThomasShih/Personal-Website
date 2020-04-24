@@ -17,12 +17,12 @@ function ProjectCard({data}){
   const gitHubIcon = iconLinkList[1].logoUrl
   return(
     <div className="ProjectCard">
-      <h1 className="projectName">{data.name}</h1>
+      <div className="projectName">{data.name}</div>
       <p className="desc">
         {data.desc}
         {data.link!=undefined &&  <div><br/><a href={data.link}>Visit This Project!</a></div>}
       </p>
-      <h5 className="length">Status: {data.length}</h5>
+      <h2 className="length">Status: {data.length}</h2>
       <Media video={data.video} picture={data.picture}/>
       <ul className="keywords">{keywords}</ul>
       <IconLink className="gitHub"
