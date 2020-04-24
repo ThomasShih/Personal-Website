@@ -1,7 +1,4 @@
-del /F .\dist
-
-mkdir .\dist\assets
-
-copy  .\assets .\dist\assets
-
-parcel build index.html
+del /F /Q .\buildDist
+mkdir .\buildDist\assets
+copy  .\assets\* .\buildDist\assets\*
+parcel build -d buildDist index.html
