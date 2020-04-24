@@ -58,7 +58,7 @@ const projectList = [
         name:"Alarm Clock Music Player",
         desc:"A school project involved the development of an alarm clock circuitry using verilog. I decided to step it up and add an non-required functionality of playing music when the alarm clock is triggered, or when prompt. This project required the understanding of basic audio compression algorithims, verilog, signal modulation, DAC converters.",
         gitHub:"https://github.com/ThomasShih/Alarm-Clock-with-Music-using-Verilog",
-        video:"https://youtu.be/m7OycdSeDko",
+        video:"http://www.youtube.com/watch?v=m7OycdSeDko",
         length:"Finished",
         picture:null,
         keywords:["Verilog","FPGA","VHDL","PPM"],
