@@ -1,6 +1,6 @@
 import React from "react"
 
-import companyList from "../assets/companyList"
+import companyList from "../javaScriptAssets/companyList"
 import {enterButton,leaveButton} from "../utilities/buttonEffects"
 
 function CompanyProfile(props){

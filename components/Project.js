@@ -1,7 +1,7 @@
 import React from "react"
 
-import projectList from "../assets/projectList"
-import iconLinkList from "../assets/contactIcons"
+import projectList from "../javaScriptAssets/projectList"
+import iconLinkList from "../javaScriptAssets/contactIcons"
 import IconLink from "./IconLink"
 import YouTubePlayer  from "react-player/lib/players/YouTube"
 

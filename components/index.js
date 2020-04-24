@@ -2,7 +2,7 @@ import React from "react"
 import ReactDOM from "react-dom"
 
 import NavbarLinks from "./NavbarLinks"
-import navbarLinks from "../assets/navbarLinks"
+import navbarLinks from "../javaScriptAssets/navbarLinks"
 import ProfileImg from "./ProfileImg"
 
 import {popIn} from "../utilities/pop.js"

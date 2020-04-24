@@ -1,7 +1,7 @@
 import React from "react"
 
 import IconLink from "./IconLink"
-import iconLinkList from "../assets/contactIcons"
+import iconLinkList from "../javaScriptAssets/contactIcons"
 import {enterButton,leaveButton} from "../utilities/buttonEffects"
 const resumeSrc = "../assets/resume.pdf"
 

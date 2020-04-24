@@ -1,7 +1,7 @@
 import React from "react"
 
 import NavbarLinks from "./NavbarLinks"
-import navbarLinks from "../assets/navbarLinks"
+import navbarLinks from "../javaScriptAssets/navbarLinks"
 import {enterButton,leaveButton} from "../utilities/buttonEffects"
 import {popIn} from "../utilities/pop"
 

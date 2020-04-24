@@ -1,6 +1,6 @@
 import React from "react"
 
-import recommendationsList from "../assets/recommendationsList"
+import recommendationsList from "../javaScriptAssets/recommendationsList"
 
 function RecommendationCard({data}){
   return(
