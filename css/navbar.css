@@ -21,7 +21,6 @@
     font-size: 5vh;
     font-weight: 200;
     font-style: normal;
-    background-color: transparent;
 }
 
 @media (max-width:1000px){
@@ -37,6 +36,7 @@
         grid-area:navbar;
         background-color: var(--nav-bg-color);
         padding:10px;
+        padding-right: 50px;
         display: grid;
         grid-template-columns: repeat(3,1fr);
         justify-content: center;
