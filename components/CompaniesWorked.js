@@ -13,7 +13,7 @@ function CompanyProfile(props){
         </a>
         <h2 className="jobTitle">{props.data.jobTitle}</h2>
         <h3 className="desc">{props.data.desc}</h3>
-        <h2 className="length">{props.data.length}</h2>
+        <h3 className="length">{props.data.length}</h3>
     </div> )
 }
 
