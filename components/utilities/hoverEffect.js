@@ -15,19 +15,14 @@ function animateButton(scale, duration, elasticity,elementID){
   });
 };
 
-function enterButton(id){animateButton(1.1, 200, 400,id)};
-function leaveButton(id){animateButton(1.0, 200, 100,id)};
+const enter = id => animateButton(1.1, 200, 400,id);
+const leave = id => animateButton(1.0, 200, 100,id);
 
-function Wrapper({Component,children}){
-  
-
-  return (
-    <Component>children</Component>
-  )
-}
+//wrapper uses button element as it has onMouseEnter and onMouseLeave
+const Wrapper = ({hoverID,children})=>( <button id = {hoverID}
+                                                onMouseEnter= {() => {enter(hoverID)}}
+                                                onMouseLeave= {() => {leave(hoverID)}}>
+                                            {children}
+                                        </button>)
 
 export default Wrapper
-
-
-
-// import {enterButton,leaveButton} from "../utilities/buttonEffects"
