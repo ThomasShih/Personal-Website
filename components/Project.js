@@ -13,15 +13,15 @@ function Media(props){
 }
 
 function ProjectCard({data}){
-  const keywords = data.keywords.map(keyword => <li className="keyword">{keyword}</li>)
+  const keywords = data.keywords.map((keyword,keywordID) => <li key={keywordID} className="keyword">{keyword}</li>)
   const gitHubIcon = iconLinkList[1].logoUrl
   return(
     <div className="ProjectCard">
       <div className="projectName">{data.name}</div>
-      <p className="desc">
+      <div className="desc">
         {data.desc}
         {data.link!=undefined &&  <div><br/><a href={data.link}>Visit This Project!</a></div>}
-      </p>
+      </div>
       <h2 className="length">Status: {data.length}</h2>
       <Media video={data.video} picture={data.picture}/>
       <ul className="keywords">{keywords}</ul>
@@ -37,7 +37,7 @@ function ProjectCard({data}){
 }
 
 function ProjectList(){
-  const projects = projectList.map(project => (<ProjectCard id={project.id} data={project}/>))
+  const projects = projectList.map((project,projectNumber) => (<ProjectCard key={`projectNumber${projectNumber}`} data={project}/>))
   return(<>{projects}</>)
 }
 

@@ -6,7 +6,7 @@ import {popIn} from "../utilities/pop.js"
 import checkCDNexist from "../utilities/checkCDN"
 
 function Landing(){
-  const navbarComponents = navbarLinks.map(link => <NavbarLinks id={link.id}
+  const navbarComponents = navbarLinks.map(link => <NavbarLinks key={link.id}
                                                                 data= {{
                                                                         id:link.id,
                                                                         key:link.name,
