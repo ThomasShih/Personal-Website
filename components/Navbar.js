@@ -12,7 +12,7 @@ function Navbar(){
                         },[])
 
   return(
-    <div id="navbar" className="navbar">
+    <div id="navbar">
       <HoverEffect hoverID="landingPageLink">
         <a className="name" href="../index.html">Thomas Shih</a>
       </HoverEffect>

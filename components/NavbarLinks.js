@@ -10,11 +10,12 @@ function removeScreen(redirectID,buttonID){
   }
 }
 
-const NavbarLinks = ({data}) =>(<HoverEffect hoverID={data.id}>
-                                  <a  className="navLink" 
-                                      onClick = {() => {removeScreen(data.href,data.id)}}>
-                                    {data.name}
-                                  </a>
-                                </HoverEffect>)
+const NavbarLinks = ({data}) =>(
+  <HoverEffect className="navLink" hoverID={data.id}>
+    <a onClick = {() => {removeScreen(data.href,data.id)}}>
+      {data.name}
+    </a>
+  </HoverEffect>
+)
 
 export default NavbarLinks

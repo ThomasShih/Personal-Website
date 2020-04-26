@@ -5,13 +5,11 @@ const resumeSrc = "../assets/resume.pdf"
 
 function ResumeDownload(){
   return(
-    <div className="resume">
-      <HoverEffect hoverID="resumeDownloadLink">
-        <a href={resumeSrc} download>
-          <i className="fa fa-download fa-2x"> Download Resume</i>
-        </a>
-      </HoverEffect>
-    </div>
+    <HoverEffect className="resume" hoverID="resumeDownloadLink">
+      <a href={resumeSrc} download>
+        <i className="fa fa-download fa-2x"> Download Resume</i>
+      </a>
+    </HoverEffect>
   )
 }
 

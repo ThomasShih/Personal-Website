@@ -19,10 +19,11 @@ const enter = id => animateButton(1.1, 200, 400,id);
 const leave = id => animateButton(1.0, 200, 100,id);
 
 //wrapper uses button element as it has onMouseEnter and onMouseLeave
-const Wrapper = ({hoverID,children})=>(
-  <button id = {hoverID}
-      onMouseEnter= {() => {enter(hoverID)}}
-      onMouseLeave= {() => {leave(hoverID)}}>
+const Wrapper = ({className,hoverID,children})=>(
+  <button id={hoverID}
+          className={className}
+          onMouseEnter= {() => {enter(hoverID)}}
+          onMouseLeave= {() => {leave(hoverID)}}>
     {children}
   </button>
 )

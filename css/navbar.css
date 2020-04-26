@@ -24,7 +24,7 @@
 }
 
 @media (max-width:1000px){
-    .navbar{
+    #navbar{
         grid-area:navbar;
         background-color: var(--nav-bg-color);
         padding: 5px;
@@ -32,7 +32,7 @@
 }
 
 @media (min-width:1001px){
-    .navbar{
+    #navbar{
         grid-area:navbar;
         background-color: var(--nav-bg-color);
         padding:10px;
