@@ -1,7 +1,7 @@
 import NavbarLinks from "./NavbarLinks"
 import navbarLinks from "../javaScriptAssets/navbarLinks"
 import HoverEffect from "./utilities/hoverEffect"
-import {popIn} from "../utilities/pop"
+import {popIn} from "./utilities/pop"
 
 function Navbar(){
   const navbarComponents = navbarLinks.map(link => <NavbarLinks key={link.id} data={link}/>)

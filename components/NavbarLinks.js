@@ -1,6 +1,6 @@
 import HoverEffect from "./utilities/hoverEffect"
-import {popOut} from "../utilities/pop"
-import {shake} from "../utilities/shake"
+import {popOut} from "./utilities/pop"
+import {shake} from "./utilities/shake"
 
 function removeScreen(redirectID,buttonID){
   if(window.location.href.includes(redirectID)){

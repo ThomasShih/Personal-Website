@@ -2,8 +2,8 @@ import NavbarLinks from "./NavbarLinks"
 import navbarLinks from "../javaScriptAssets/navbarLinks"
 import ProfileImg from "./ProfileImg"
 
-import {popIn} from "../utilities/pop.js"
-import checkCDNexist from "../utilities/checkCDN"
+import {popIn} from "./utilities/pop.js"
+import checkCDNexist from "./utilities/checkCDN"
 
 function Landing(){
   const navbarComponents = navbarLinks.map(link => <NavbarLinks key={link.id}

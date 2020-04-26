@@ -25,4 +25,4 @@ function popOut(id,callback){pop(id, 500,0,[1,0],[1,0],callback)};
 
 export {popIn,popOut}
 
-// import {popIn,popOut} from "../utilities/pop.js"
+// import {popIn,popOut} from "./utilities/pop.js"
