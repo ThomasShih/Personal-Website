@@ -1,4 +1,4 @@
-import {enterButton,leaveButton} from "../utilities/buttonEffects"
+import HoverEffect from "./utilities/hoverEffect"
 import {popOut} from "../utilities/pop"
 import {shake} from "../utilities/shake"
 
@@ -10,16 +10,11 @@ function removeScreen(redirectID,buttonID){
   }
 }
 
-function NavbarLinks({data}){
-  return(
-    <button className="navLink"
-            onClick     = {() => {removeScreen(data.href,data.id)}}
-            onMouseEnter= {() => {enterButton(data.id)}}
-            onMouseLeave= {() => {leaveButton(data.id)}}
-            id={data.id}>
-      {data.name}
-    </button>
-  )
-}
+const NavbarLinks = ({data}) =>(<HoverEffect hoverID={data.id}>
+                                  <a  className="navLink" 
+                                      onClick = {() => {removeScreen(data.href,data.id)}}>
+                                    {data.name}
+                                  </a>
+                                </HoverEffect>)
 
 export default NavbarLinks

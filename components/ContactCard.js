@@ -1,17 +1,17 @@
 import IconLink from "./IconLink"
 import iconLinkList from "../javaScriptAssets/contactIcons"
-import {enterButton,leaveButton} from "../utilities/buttonEffects"
+import HoverEffect from "./utilities/hoverEffect"
 const resumeSrc = "../assets/resume.pdf"
 
 function ResumeDownload(){
   return(
-    <a className="resume" href={resumeSrc} download>
-      <button id="resumeDownload"
-              onMouseEnter={() => {enterButton("resumeDownload")}}
-              onMouseLeave={() => {leaveButton("resumeDownload")}}>
-        <i className="fa fa-download fa-2x"> Download Resume</i>
-      </button>
-    </a>
+    <div className="resume">
+      <HoverEffect hoverID="resumeDownloadLink">
+        <a href={resumeSrc} download>
+          <i className="fa fa-download fa-2x"> Download Resume</i>
+        </a>
+      </HoverEffect>
+    </div>
   )
 }
 
