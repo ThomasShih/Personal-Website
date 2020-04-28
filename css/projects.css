@@ -1,74 +1,70 @@
-:root {
-    --main-bg-color:#316cb3;
-    --main-text-color: white;
-    --component-bg-color: #c5d8ef;
-    --component-text-color:#316cb3;
-}
-
 img{
     width: 100%;
 }
 
 .media{
     grid-area:media;
-    padding: 15px;
-    border-radius: 25px;
     display: flex;
     align-items: center;
-    
+    margin:.5em 1em .5em 1em;
 }
+
 .projectName{
     grid-area:name;
     color:var(--main-bg-color);
-    font-family: "Times New Roman", Times, serif;
-    font-size: 50px;
-    font-weight: 1000;
 }
+
 .desc{
     grid-area:desc;
     color: black;
-    font-size:20px;
+    font-size:2em;
 }
+
 .keywords{
     grid-area:keywords;
 }
+
 .keyword{
-    list-style: square;
     text-align: justify;
-    color: black;
-    font-family: "Arial", Gadget, sans-serif;
-    font-size: 25px;
+    font-size: 2em;
 }
+
 .gitHub{
     grid-area:gitHub;
-    max-width: 50px;
 }
-.length{
-    grid-area:length;
-    color:black;
-    padding-top: 20px;
+
+.status{
+    grid-area:status;
     text-align: center;
+}
+
+.status *{
+    padding-bottom: .5em;
+}
+
+.ProjectCard{
+    margin-top:1.5em;
+    border-radius: 1.7em;
+    background-color: var(--component-bg-color);
+    color:var(--component-text-color);
+    display: grid;
+    grid-column-gap:2em;
 }
 
 @media (max-width:1099px){
     .ProjectCard{
-        margin:15px;
-        padding: 5px;
-        border-radius: 25px;
-        background-color: var(--component-bg-color);
-        color:var(--component-text-color);
-        text-align: center;
-    
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        grid-column-gap: 5px;
-        grid-row-gap: 5px;
+        padding: 3em 2em 3em 2em;
+        grid-template-columns: repeat(2,1fr);
+        grid-row-gap: 2em;
         grid-template-areas:
             "name name"
-            "media gitHub"
-            "media length"
+            "media status"
             "media keywords"
             "desc desc";
+    }
+
+    .projectName{
+        text-align: center;
     }
 
     .media{
@@ -78,23 +74,15 @@ img{
 
 @media (max-width:500px){
     .ProjectCard{
-        margin:15px;
-        padding: 5px;
-        border-radius: 25px;
-        background-color: var(--component-bg-color);
-        color:var(--component-text-color);
-        text-align: center;
-    
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        grid-column-gap: 5px;
-        grid-row-gap: 5px;
+        padding: 3em;
+        grid-template-columns: 1fr;
+        grid-row-gap: 2em;
         grid-template-areas:
-            "name name"
-            "media media"
-            "keywords gitHub"
-            "keywords length"
-            "desc desc";
+            "name"
+            "media"
+            "status"
+            "keywords"
+            "desc";
     }
 
     .media{
@@ -104,24 +92,10 @@ img{
 
 @media (min-width:1100px){
     .ProjectCard{
-        margin:15px;
-        padding: 5px;
-        border-radius: 25px;
-        background-color: var(--component-bg-color);
-        color:var(--component-text-color);
-        text-align: center;
-    
-        display: grid;
-        grid-template-columns: 2fr 6fr 1fr 75px;
-        grid-template-rows: 1fr 3fr;
-        grid-column-gap: 5px;
-        grid-row-gap: 5px;
+        padding: 3em 1em 3em 1em;
+        grid-template-columns: 1fr 3fr 1fr;
         grid-template-areas:
-            "media name length gitHub"
-            "media desc keywords keywords";
-    }
-
-    .desc{
-        font-size: 1.5vw;
+            "media name status"
+            "media desc keywords";
     }
 }

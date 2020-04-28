@@ -2,6 +2,8 @@ import companyList from "../javaScriptAssets/companyList"
 import HoverEffect from "./utilities/hoverEffect"
 
 function CompanyProfile(props){
+  const descLi = props.data.desc.map((item,index) => <li key={index}>{item}</li>)
+  console.log(props.data.imageUrl)
   return(
     <div className="companyProfile">
       <HoverEffect className="logoLink" hoverID={props.data.id + "_icon"}>
@@ -10,7 +12,7 @@ function CompanyProfile(props){
         </a>
       </HoverEffect>
       <h2 className="jobTitle">{props.data.jobTitle}</h2>
-      <h3 className="desc">{props.data.desc}</h3>
+      <ul className="desc">{descLi}</ul>
       <h3 className="length">{props.data.length}</h3>
     </div> )
 }
@@ -21,7 +23,7 @@ function CompaniesWorked(){
                                                                         data    ={company}/>)
   return(
     <div className="main">
-      <div className="workExperienceHeader">Work Experience</div>
+      <h1 className="workExperienceHeader">Work Experience</h1>
       {companyComponents}
     </div>
   )

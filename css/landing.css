@@ -23,10 +23,6 @@ html{
     word-spacing: 6px;
     font-size:10vw;
     font-weight: 400;
-    text-decoration: none;
-    font-style: normal;
-    font-variant: normal;
-    text-transform: none;
 }
 
 .navLink{
@@ -36,14 +32,13 @@ html{
     font-size: 6vw;
     font-style: normal;
     text-shadow: 9px 10px 10px rgba(71,29,136,0.5);
-    background-color: transparent;
 }
 
 .navLink:hover{
     text-shadow: 10px -10px 19px rgba(71,29,136,0.5), 10px 10px 19px rgba(71,29,136,0.5), -10px 10px 19px rgba(71,29,136,0.5), -10px -10px 19px rgba(71,29,136,0.5);
 }
 
-.portrait{
+.portrait img{
     max-width:50vw;
     max-height:40vh;
 }
@@ -58,6 +53,7 @@ html{
     .navLinks{
         display: grid;
         grid-template-columns: 1fr 1fr;
+        grid-column-gap: 10em;
     }
     .navLink{
         text-decoration: none;

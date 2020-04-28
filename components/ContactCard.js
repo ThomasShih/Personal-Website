@@ -5,9 +5,9 @@ const resumeSrc = "../assets/resume.pdf"
 
 function ResumeDownload(){
   return(
-    <HoverEffect className="resume" hoverID="resumeDownloadLink">
+    <HoverEffect hoverID="resumeDownloadLink">
       <a href={resumeSrc} download>
-        <i className="fa fa-download fa-2x"> Download Resume</i>
+        <h2><i className="fa fa-download fa-2x"> Download Resume</i></h2>
       </a>
     </HoverEffect>
   )

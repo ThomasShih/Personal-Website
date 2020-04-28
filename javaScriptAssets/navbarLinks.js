@@ -4,7 +4,7 @@ var navbarLinks = [
         href:"work.html",
         id:"workLink"
     },{
-        name:"Hobbies and Projects",
+        name:"Personal Projects",
         href:"projects.html",
         id:"projectLink"
     }

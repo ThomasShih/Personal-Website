@@ -1,4 +1,4 @@
 del /F /Q.\dist
-mkdir .\buildDist\assets
-copy  .\assets\* .\buildDist\assets\*
+mkdir .\dist\assets
+copy  .\assets\* .\dist\assets\*
 parcel index.html

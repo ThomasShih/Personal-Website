@@ -9,24 +9,25 @@ function ProjectCard({data}){
   const gitHubIcon = iconLinkList[1].logoUrl
   return(
     <div className="ProjectCard">
-      <div className="projectName">{data.name}</div>
-      <div className="desc">
+      <h1 className="projectName">{data.name}</h1>
+      <p className="desc">
         {data.desc}
         {data.link!=undefined &&  
           <HoverEffect hoverID={`${data.id}_visitLink`}>
-            <br/><h1><a href={data.link}>Visit This Project!</a></h1>
+            <br/><h2><a href={data.link}>Visit This Project!</a></h2>
           </HoverEffect>
         }
+      </p>
+      <div className="status">
+        <IconLink className="gitHub"
+                  data={{url:data.gitHub
+                        ,id:data.id+"icon"
+                        ,logoUrl:gitHubIcon
+                        ,alt:"GitHub"}}/>
+        <h3>Status: {data.length}</h3>
       </div>
-      <h2 className="length">Status: {data.length}</h2>
       <Media video={data.video} picture={data.picture}/>
       <ul className="keywords">{keywords}</ul>
-      <IconLink className="gitHub"
-                data={{
-                       url:data.gitHub
-                      ,id:data.id+"icon"
-                      ,logoUrl:gitHubIcon
-                      ,alt:"GitHub"}}/>
       {data.attribution!=undefined && <h6>{data.attribution}</h6>}
     </div>
   )

@@ -23,7 +23,7 @@ function Landing(){
 
   return(
           <div className="landing">
-            <div className="name" id="name"> Thomas Shih </div>
+            <div className="name" id="name">Thomas Shih</div>
             <ProfileImg/>
             <div className="navLinks">
                 {navbarComponents}

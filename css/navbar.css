@@ -1,45 +1,40 @@
-:root {
-    --main-bg-color:#316cb3   ;
-    --main-text-color: white;
-    --component-bg-color: #c5d8ef;
-    --nav-bg-color:#558dd1;
+#navbar{
+    margin: -3em -3em 0 -3em;
 }
 
 .name{
-    font-size: 7vh;
-    color: var(--main-text-color);
-    font-weight: 700;
+    font-size: 5em;
+    color: var(--nav-text-color);
+    font-weight: bold;
     text-decoration: none;
-    font-style: normal;
-    font-variant: normal;
-    text-transform: none;
     text-align: center;
 }
 
 .navLink{
-    color:var(--main-text-color);
-    font-size: 5vh;
-    font-weight: 200;
-    font-style: normal;
+    color:var(--nav-text-color);
+    font-size: 3em;
+    font-weight:lighter;
+}
+
+#navbar{
+    background-color: var(--nav-bg-color);
+    text-align: center;
+    padding: 1em 0 1em 0;
+    grid-area:navbar;
+    grid-column-gap: 2em;
+    grid-row-gap: 2em;
 }
 
 @media (max-width:1000px){
     #navbar{
-        grid-area:navbar;
-        background-color: var(--nav-bg-color);
-        padding: 5px;
+        display: grid;
+        grid-template-columns: 1fr;
     }
 }
 
 @media (min-width:1001px){
     #navbar{
-        grid-area:navbar;
-        background-color: var(--nav-bg-color);
-        padding:10px;
-        padding-right: 50px;
         display: grid;
         grid-template-columns: repeat(3,1fr);
-        justify-content: center;
-        text-align: center;
     }
 }
