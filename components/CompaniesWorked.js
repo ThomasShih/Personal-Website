@@ -3,7 +3,6 @@ import HoverEffect from "./utilities/hoverEffect"
 
 function CompanyProfile(props){
   const descLi = props.data.desc.map((item,index) => <li key={index}>{item}</li>)
-  console.log(props.data.imageUrl)
   return(
     <div className="companyProfile">
       <HoverEffect className="logoLink" hoverID={props.data.id + "_icon"}>

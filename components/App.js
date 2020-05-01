@@ -1,7 +1,7 @@
 import Landing from "./Landing"
 import Projects from "./projects"
 import Work from "./Work"
-import {Link, Switch, Route} from "react-router-dom"
+import {Switch, Route} from "react-router-dom"
 
 function App(){
   return(

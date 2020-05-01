@@ -3,12 +3,11 @@ import navbarLinks from "../javaScriptAssets/navbarLinks"
 import ProfileImg from "./ProfileImg"
 import {popIn} from "./utilities/pop.js"
 
-
 //Import the stylesheet
-import "../css/landing.css"
-
+import {style} from "../css/landing.css"
 
 function Landing(){
+  console.log(style)
   const navbarComponents = navbarLinks.map(link => <NavbarLinks key={link.id} data= {link}/>)
 
   React.useEffect(() => {
