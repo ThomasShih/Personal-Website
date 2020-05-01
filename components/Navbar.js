@@ -1,6 +1,7 @@
 import NavbarLinks from "./NavbarLinks"
 import navbarLinks from "../javaScriptAssets/navbarLinks"
 import HoverEffect from "./utilities/hoverEffect"
+import {Link} from "react-router-dom"
 import {popIn} from "./utilities/pop"
 
 function Navbar(){
@@ -14,7 +15,7 @@ function Navbar(){
   return(
     <div id="navbar">
       <HoverEffect hoverID="landingPageLink">
-        <a className="name" href="../index.html">Thomas Shih</a>
+        <Link to="/" className="name">Thomas Shih</Link>
       </HoverEffect>
       {navbarComponents}
     </div>

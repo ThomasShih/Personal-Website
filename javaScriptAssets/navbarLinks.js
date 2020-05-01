@@ -1,11 +1,11 @@
 var navbarLinks = [
     {
         name:"Work Experience",
-        href:"work.html",
+        link:"/work",
         id:"workLink"
     },{
         name:"Personal Projects",
-        href:"projects.html",
+        link:"/projects",
         id:"projectLink"
     }
 ]

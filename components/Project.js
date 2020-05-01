@@ -4,6 +4,10 @@ import IconLink from "./IconLink"
 import Media from "./Media"
 import HoverEffect from "./utilities/hoverEffect"
 
+//Import the stylesheet
+import "../css/projects.css"
+import "../css/navbar.css"
+
 function ProjectCard({data}){
   const keywords = data.keywords.map((keyword,keywordID) => <li key={keywordID} className="keyword">{keyword}</li>)
   const gitHubIcon = iconLinkList[1].logoUrl

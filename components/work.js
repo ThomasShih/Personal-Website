@@ -2,10 +2,12 @@ import Navbar from "./Navbar"
 import Recommendations from "./Recommendations"
 import CompaniesWorked from "./CompaniesWorked"
 import ContactCard from "./ContactCard"
-import checkCDNexist from "./utilities/checkCDN"
 
-function WorkExperience(){
-  checkCDNexist();
+//Import the stylesheet
+import "../css/work.css"
+import "../css/navbar.css"
+
+function Work(){
   return(
     <div className="layout">
       <Navbar/>
@@ -16,4 +18,4 @@ function WorkExperience(){
   )
 }
 
-ReactDOM.render(<WorkExperience/>,document.getElementById("body"))
+export default Work
