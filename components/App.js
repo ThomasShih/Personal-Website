@@ -4,30 +4,31 @@ import Projects from "./Projects"
 import Work from "./Work"
 import {Switch, Route} from "react-router-dom"
 
+const NotLanding = () => (
+  <>
+    <Navbar/>
+    <Switch>
+      <Route exact path="/work">
+        <Work/>
+      </Route>
+      <Route exact path="/projects">
+        <div className="layout">
+        <Projects/>
+        </div>
+      </Route>
+    </Switch>
+  </>
+)
 
-//Import the stylesheet
-// import "../css/projects.css"
-
-function App(){
-  return(
-          <>
-            <Switch>
-              <Route exact path="/">
-                  <Landing/>
-              </Route>
-              <Route exact path="/work">
-                  <Navbar/>
-                  <Work/>
-              </Route>
-              <Route exact path="/projects">
-                <div className="layout">
-                  <Navbar/>
-                  <Projects/>
-                </div>
-              </Route>
-            </Switch>
-          </>
-        )
-}
+const App = () => (
+  <Switch>
+    <Route exact path="/">
+      <Landing/>
+    </Route>
+    <Route path="*">
+      <NotLanding/>
+    </Route>
+  </Switch>
+)
 
 export default App
