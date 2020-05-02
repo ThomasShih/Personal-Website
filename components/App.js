@@ -1,5 +1,6 @@
 import Landing from "./Landing"
-import Projects from "./projects"
+import Navbar from "./Navbar"
+import Projects from "./Projects"
 import Work from "./Work"
 import {Switch, Route} from "react-router-dom"
 
@@ -12,17 +13,15 @@ function App(){
           <>
             <Switch>
               <Route exact path="/">
-                <div className="landingStyleSheet">
                   <Landing/>
-                </div>
               </Route>
               <Route exact path="/work">
-                <div className="workStyleSheet">
+                  <Navbar/>
                   <Work/>
-                </div>
               </Route>
               <Route exact path="/projects">
-                <div className="projectsStyleSheet">
+                <div className="layout">
+                  <Navbar/>
                   <Projects/>
                 </div>
               </Route>
