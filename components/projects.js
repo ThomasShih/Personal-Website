@@ -15,9 +15,12 @@ function ProjectCard({data,id}){
       <p className="desc">
         {data.desc}
         {data.link!=undefined &&  
+          <>
+          <br/><br/>
           <HoverEffect hoverID={`${data.id}_visitLink`}>
-            <br/><h2><a href={data.link}>Visit This Project!</a></h2>
+            <h2><a href={data.link}>Visit This Project!</a></h2>
           </HoverEffect>
+          </>
         }
       </p>
       <div className="status">
