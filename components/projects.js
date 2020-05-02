@@ -35,7 +35,11 @@ function ProjectCard({data}){
 
 function Projects(){
   const projects = projectList.map((project,projectNumber) => (<ProjectCard key={`projectNumber${projectNumber}`} data={project}/>))
-  return(<>{projects}</>)
+  return(
+    <div className="layout">
+      {projects}
+    </div>
+  )
 }
 
 export default Projects

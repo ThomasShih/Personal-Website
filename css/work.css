@@ -1,6 +1,5 @@
-.main{
-    margin: 1em 1em 0 1em;
-    grid-area:main;
+.companiesWorked{
+    grid-area:companiesWorked;
     background-color: var(--component-bg-color);
     box-shadow: var(--boxShadow);
     border-radius: 1.7em;
@@ -17,12 +16,8 @@
 }
 
 .workExperienceHeader{
-    font-size: 2em;
-    font-weight: bold;
     text-align: center;
     padding:.5em;
-
-    color:var(--main-bg-color);
     border-bottom: 1px solid var(--main-bg-color);
 }
 
@@ -60,7 +55,6 @@
     background-color: var(--component-bg-color);
     border-radius: 1.7em;
     padding:2em;
-    margin:1em 1em 0 1em;
     display: grid;
     grid-template-rows: auto;
     grid-template-columns: 10em 3fr;
@@ -86,12 +80,15 @@
     padding: 1em;
     align-items: center;
     display: grid;
-    grid-column-gap: 2em;
+    column-gap: 2em;
 }
 
 .work{
+    margin: 1em;
     display:grid;
     grid-template-rows: auto;
+    row-gap: 1em;
+    column-gap:1em;
 }
 
 .contactCard{
@@ -99,7 +96,6 @@
     box-shadow: var(--boxShadow);
     background-color: var(--component-bg-color);
     border-radius: 1.7em;
-    margin: 1em 1em 0 1em;
     display: grid;
 }
 
@@ -107,7 +103,7 @@
     .work .companyProfile{
         margin:2em;
         border-bottom: 1px solid var(--main-bg-color);
-        grid-row-gap:1em;
+        row-gap:1em;
         grid-template-areas:
         "logo"
         "jobTitle"
@@ -115,19 +111,18 @@
         "desc";
     }
 
+    .work{
+        grid-template-areas: 
+        "contactCard"
+        "companiesWorked"
+        "aside";
+    }
+
     .work .contactCard{
         padding:2em;
         grid-template-columns: auto;
         grid-template-rows: auto;
-        grid-row-gap: 2em;
-    }
-
-    .work{
-        grid-template-areas: 
-        "navbar"
-        "contactCard"
-        "main"
-        "aside";
+        row-gap: 2em;
     }
 }
 
@@ -143,14 +138,13 @@
     .work{
         grid-template-columns: 5fr 4fr;
         grid-template-areas: 
-        "navbar      navbar"
-        "contactCard aside"
-        "main        aside";
+        "contactCard     aside"
+        "companiesWorked aside";
     }
 
     .work .contactCard{
         padding: 0em 3em 0em 2em;
         grid-template-columns: auto repeat(3, 6em);
-        grid-column-gap: 2em;
+        column-gap: 2em;
     }
 }

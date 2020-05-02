@@ -21,7 +21,7 @@ function CompaniesWorked(){
   const companyComponents = companyList.map(company => <CompanyProfile  key     ={company.id}
                                                                         data    ={company}/>)
   return(
-    <div className="main">
+    <div className="companiesWorked">
       <h1 className="workExperienceHeader">Work Experience</h1>
       {companyComponents}
     </div>

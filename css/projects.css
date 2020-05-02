@@ -32,14 +32,14 @@
     background-color: var(--component-bg-color);
     color:var(--component-text-color);
     display: grid;
-    grid-column-gap:2em;
+    column-gap:2em;
 }
 
 @media (max-width:500px){
     .projectCard{
         padding: 3em;
         grid-template-columns: 1fr;
-        grid-row-gap: 2em;
+        row-gap: 2em;
         grid-template-areas:
             "name"
             "media"
@@ -57,7 +57,7 @@
     .projectCard{
         padding: 3em 2em 3em 2em;
         grid-template-columns: repeat(2,1fr);
-        grid-row-gap: 2em;
+        row-gap: 2em;
         grid-template-areas:
             "name name"
             "media status"

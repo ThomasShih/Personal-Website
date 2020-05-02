@@ -12,9 +12,7 @@ const NotLanding = () => (
         <Work/>
       </Route>
       <Route exact path="/projects">
-        <div className="layout">
         <Projects/>
-        </div>
       </Route>
     </Switch>
   </>
