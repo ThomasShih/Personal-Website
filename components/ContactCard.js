@@ -1,6 +1,7 @@
 import IconLink from "./IconLink"
 import iconLinkList from "../javaScriptAssets/contactIcons"
 import HoverEffect from "./utilities/hoverEffect"
+import {usePop} from "./utilities/pop"
 const resumeSrc = "../assets/resume.pdf"
 
 function ResumeDownload(){
@@ -13,10 +14,12 @@ function ResumeDownload(){
   )
 }
 
-function ContactCard(){
+function ContactCard({id}){
   const iconLinks = iconLinkList.map(icon => <IconLink key={icon.id} data={icon}/>)
+  React.useEffect(() => {return(usePop(id))},[])
+
   return(
-      <div className="contactCard">
+      <div id={id} style={{opacity:0}} className="contactCard">
         <ResumeDownload/>
         {iconLinks}
       </div>

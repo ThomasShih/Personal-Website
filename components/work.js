@@ -5,9 +5,9 @@ import ContactCard from "./ContactCard"
 function Work(){
   return(
     <div className="work">
-      <ContactCard/>
-      <Recommendations/>
-      <CompaniesWorked/>
+      <ContactCard     id={"ContactCard"}    />
+      <Recommendations id={"Recommendations"}/>
+      <CompaniesWorked id={"CompaniesWorked"}/>
     </div>
   )
 }

@@ -1,4 +1,4 @@
-.companiesWorked{
+#CompaniesWorked{
     grid-area:companiesWorked;
     background-color: var(--component-bg-color);
     box-shadow: var(--boxShadow);
@@ -91,8 +91,8 @@
     column-gap:1em;
 }
 
-.contactCard{
-    grid-area:contactCard;
+#ContactCard{
+    grid-area:ContactCard;
     box-shadow: var(--boxShadow);
     background-color: var(--component-bg-color);
     border-radius: 1.7em;
@@ -113,12 +113,12 @@
 
     .work{
         grid-template-areas: 
-        "contactCard"
+        "ContactCard"
         "companiesWorked"
         "aside";
     }
 
-    .work .contactCard{
+    #ContactCard{
         padding:2em;
         grid-template-columns: auto;
         grid-template-rows: auto;
@@ -138,11 +138,11 @@
     .work{
         grid-template-columns: 5fr 4fr;
         grid-template-areas: 
-        "contactCard     aside"
+        "ContactCard     aside"
         "companiesWorked aside";
     }
 
-    .work .contactCard{
+    #ContactCard{
         padding: 0em 3em 0em 2em;
         grid-template-columns: auto repeat(3, 6em);
         column-gap: 2em;

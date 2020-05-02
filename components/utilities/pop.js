@@ -1,8 +1,4 @@
-function pop(elementID, duration, elasticity,scale,opacity,callback=undefined){
-  //setup
-  if(callback === undefined){
-    callback = ()=>{return}
-  }
+function pop(elementID,scale,opacity){
   if(elementID === "*"){
     var id = elementID;
   }else{
@@ -14,15 +10,18 @@ function pop(elementID, duration, elasticity,scale,opacity,callback=undefined){
     targets: id,
     opacity: opacity,
     scale: scale,
-    duration: duration,
-    easing: 'easeInOutQuad',
-    changeComplete: callback,
+    easing: "spring(1,200,13,0)", //'spring(mass, stiffness, damping, velocity)'
   });
 };
 
-function popIn(id){pop(id, 400,0,[0.5,1],[0,1])};
-function popOut(id,callback){pop(id, 500,0,[1,0],[1,0],callback)};
+function popIn(id){pop(id,[0.5,1],[0,1])};
+function popOut(id){pop(id,[1,0],[1,0])};
 
-export {popIn,popOut}
+function usePop(id){
+  //Make sure default opacity is set to 0
+  popIn(id)
+  const cleanUp = () => {popOut(id)}
+  return cleanUp
+}
 
-// import {popIn,popOut} from "./utilities/pop.js"
+export {popIn,popOut,usePop}
