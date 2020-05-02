@@ -1,0 +1,2 @@
+#navbar{background-color:var(--nav-bg-color);text-align:center;padding:1em 0;grid-area:navbar;grid-column-gap:2em;grid-row-gap:2em}#navbar #landingPageLink .name{font-size:3em;color:var(--nav-text-color);font-weight:700;text-decoration:none;text-align:center}.navbar_navlink *{color:var(--nav-text-color);font-size:2em;font-weight:lighter;text-decoration:none}@media (max-width:1000px){#navbar{display:grid;grid-template-columns:1fr}}@media (min-width:1001px){#navbar{display:grid;grid-template-columns:repeat(3,1fr)}}
+/*# sourceMappingURL=/navbar.88056438.css.map */

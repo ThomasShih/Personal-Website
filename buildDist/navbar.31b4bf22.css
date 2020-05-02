@@ -1,2 +1,0 @@
-#navbar{margin:-3em -3em 0}.name{font-size:5em;font-weight:700;text-decoration:none;text-align:center}.name,.navLink{color:var(--nav-text-color)}.navLink{font-size:3em;font-weight:lighter}#navbar{background-color:var(--nav-bg-color);text-align:center;padding:1em 0;grid-area:navbar;grid-column-gap:2em;grid-row-gap:2em}@media (max-width:1000px){#navbar{display:grid;grid-template-columns:1fr}}@media (min-width:1001px){#navbar{display:grid;grid-template-columns:repeat(3,1fr)}}
-/*# sourceMappingURL=/navbar.31b4bf22.css.map */
