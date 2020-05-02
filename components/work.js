@@ -3,13 +3,9 @@ import Recommendations from "./Recommendations"
 import CompaniesWorked from "./CompaniesWorked"
 import ContactCard from "./ContactCard"
 
-//Import the stylesheet
-import "../css/work.css"
-import "../css/navbar.css"
-
 function Work(){
   return(
-    <div className="layout">
+    <div className="work">
       <Navbar/>
       <ContactCard/>
       <Recommendations/>

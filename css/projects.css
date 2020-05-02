@@ -1,49 +1,33 @@
-img{
-    width: 100%;
-}
-
-.media{
+.projectCard .media{
     grid-area:media;
     display: flex;
     align-items: center;
     margin:.5em 1em .5em 1em;
 }
 
-.projectName{
+.projectCard .media img{
+    width: 100%;
+}
+
+.projectCard .name{
     grid-area:name;
     color:var(--main-bg-color);
 }
 
-.desc{
+.projectCard .desc{
     grid-area:desc;
     color: black;
-    font-size:2em;
+    font-size:1.2em;
 }
 
-.keywords{
-    grid-area:keywords;
-}
-
-.keyword{
-    text-align: justify;
-    font-size: 2em;
-}
-
-.gitHub{
-    grid-area:gitHub;
-}
-
-.status{
+.projectCard .status{
     grid-area:status;
     text-align: center;
+    padding-bottom: 1em;
 }
 
-.status *{
-    padding-bottom: .5em;
-}
-
-.ProjectCard{
-    margin-top:1.5em;
+.projectCard{
+    margin:1em 1em 0 1em;
     border-radius: 1.7em;
     background-color: var(--component-bg-color);
     color:var(--component-text-color);
@@ -51,29 +35,8 @@ img{
     grid-column-gap:2em;
 }
 
-@media (max-width:1099px){
-    .ProjectCard{
-        padding: 3em 2em 3em 2em;
-        grid-template-columns: repeat(2,1fr);
-        grid-row-gap: 2em;
-        grid-template-areas:
-            "name name"
-            "media status"
-            "media keywords"
-            "desc desc";
-    }
-
-    .projectName{
-        text-align: center;
-    }
-
-    .media{
-        max-width: 60vw;
-    }
-}
-
 @media (max-width:500px){
-    .ProjectCard{
+    .projectCard{
         padding: 3em;
         grid-template-columns: 1fr;
         grid-row-gap: 2em;
@@ -90,8 +53,29 @@ img{
     }
 }
 
+@media (max-width:1099px){
+    .projectCard{
+        padding: 3em 2em 3em 2em;
+        grid-template-columns: repeat(2,1fr);
+        grid-row-gap: 2em;
+        grid-template-areas:
+            "name name"
+            "media status"
+            "media keywords"
+            "desc desc";
+    }
+
+    .projectCard .name{
+        text-align: center;
+    }
+
+    .media{
+        max-width: 60vw;
+    }
+}
+
 @media (min-width:1100px){
-    .ProjectCard{
+    .projectCard{
         padding: 3em 1em 3em 1em;
         grid-template-columns: 1fr 3fr 1fr;
         grid-template-areas:

@@ -4,16 +4,12 @@ import IconLink from "./IconLink"
 import Media from "./Media"
 import HoverEffect from "./utilities/hoverEffect"
 
-//Import the stylesheet
-import "../css/projects.css"
-import "../css/navbar.css"
-
 function ProjectCard({data}){
   const keywords = data.keywords.map((keyword,keywordID) => <li key={keywordID} className="keyword">{keyword}</li>)
   const gitHubIcon = iconLinkList[1].logoUrl
   return(
-    <div className="ProjectCard">
-      <h1 className="projectName">{data.name}</h1>
+    <div className="projectCard">
+      <h1 className="name">{data.name}</h1>
       <p className="desc">
         {data.desc}
         {data.link!=undefined &&  
@@ -30,7 +26,7 @@ function ProjectCard({data}){
                         ,alt:"GitHub"}}/>
         <h3>Status: {data.length}</h3>
       </div>
-      <Media video={data.video} picture={data.picture}/>
+      <Media className="media" video={data.video} picture={data.picture}/>
       <ul className="keywords">{keywords}</ul>
       {data.attribution!=undefined && <h6>{data.attribution}</h6>}
     </div>

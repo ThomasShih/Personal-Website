@@ -7,7 +7,7 @@ function ResumeDownload(){
   return(
     <HoverEffect hoverID="resumeDownloadLink">
       <a href={resumeSrc} download>
-        <h2><i className="fa fa-download fa-2x"> Download Resume</i></h2>
+        <h2><i className="fa fa-download fa-lg"> Download Resume</i></h2>
       </a>
     </HoverEffect>
   )

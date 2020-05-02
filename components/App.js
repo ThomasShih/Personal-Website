@@ -3,18 +3,28 @@ import Projects from "./projects"
 import Work from "./Work"
 import {Switch, Route} from "react-router-dom"
 
+
+//Import the stylesheet
+// import "../css/projects.css"
+
 function App(){
   return(
           <>
             <Switch>
               <Route exact path="/">
-                <Landing/>
+                <div className="landingStyleSheet">
+                  <Landing/>
+                </div>
               </Route>
               <Route exact path="/work">
-                <Work/>
+                <div className="workStyleSheet">
+                  <Work/>
+                </div>
               </Route>
               <Route exact path="/projects">
-                <Projects/>
+                <div className="projectsStyleSheet">
+                  <Projects/>
+                </div>
               </Route>
             </Switch>
           </>

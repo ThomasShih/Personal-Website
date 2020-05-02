@@ -1,8 +1,8 @@
 .main{
+    margin: 1em 1em 0 1em;
     grid-area:main;
     background-color: var(--component-bg-color);
     box-shadow: var(--boxShadow);
-    margin-top:15px;
     border-radius: 1.7em;
 }
 .aside{
@@ -11,13 +11,13 @@
 .profileImg{
     grid-area:profileImg;
 }
-
 .logoLink{
     grid-area:logo;
+    max-width:15vw;
 }
 
 .workExperienceHeader{
-    font-size: 3em;
+    font-size: 2em;
     font-weight: bold;
     text-align: center;
     padding:.5em;
@@ -60,7 +60,7 @@
     background-color: var(--component-bg-color);
     border-radius: 1.7em;
     padding:2em;
-
+    margin:1em 1em 0 1em;
     display: grid;
     grid-template-rows: auto;
     grid-template-columns: 10em 3fr;
@@ -89,10 +89,8 @@
     grid-column-gap: 2em;
 }
 
-.layout{
+.work{
     display:grid;
-    grid-row-gap:1em;
-    grid-column-gap: 1em;
     grid-template-rows: auto;
 }
 
@@ -101,11 +99,12 @@
     box-shadow: var(--boxShadow);
     background-color: var(--component-bg-color);
     border-radius: 1.7em;
+    margin: 1em 1em 0 1em;
     display: grid;
 }
 
 @media (max-width:1000px){
-    .companyProfile{
+    .work .companyProfile{
         margin:2em;
         border-bottom: 1px solid var(--main-bg-color);
         grid-row-gap:1em;
@@ -116,14 +115,14 @@
         "desc";
     }
 
-    .contactCard{
-        padding:4em;
+    .work .contactCard{
+        padding:2em;
         grid-template-columns: auto;
         grid-template-rows: auto;
         grid-row-gap: 2em;
     }
 
-    .layout{
+    .work{
         grid-template-areas: 
         "navbar"
         "contactCard"
@@ -141,7 +140,7 @@
         "logo desc     length";
     }
 
-    .layout{
+    .work{
         grid-template-columns: 5fr 4fr;
         grid-template-areas: 
         "navbar      navbar"
@@ -149,8 +148,8 @@
         "main        aside";
     }
 
-    .contactCard{
-        padding: 1em 3em 1em 2em;
+    .work .contactCard{
+        padding: 0em 3em 0em 2em;
         grid-template-columns: auto repeat(3, 6em);
         grid-column-gap: 2em;
     }

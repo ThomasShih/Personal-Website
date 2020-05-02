@@ -1,28 +1,25 @@
 #navbar{
-    margin: 0 -3em 0 -3em;
-}
-
-.name{
-    font-size: 5em;
-    color: var(--nav-text-color);
-    font-weight: bold;
-    text-decoration: none;
-    text-align: center;
-}
-
-.navLink{
-    color:var(--nav-text-color);
-    font-size: 3em;
-    font-weight:lighter;
-}
-
-#navbar{
     background-color: var(--nav-bg-color);
     text-align: center;
     padding: 1em 0 1em 0;
     grid-area:navbar;
     grid-column-gap: 2em;
     grid-row-gap: 2em;
+}
+
+#navbar #landingPageLink .name{
+    font-size: 3em;
+    color: var(--nav-text-color);
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+}
+
+.navbar_navlink *{
+    color:var(--nav-text-color);
+    font-size: 2em;
+    font-weight:lighter;
+    text-decoration: none;
 }
 
 @media (max-width:1000px){

@@ -1,12 +1,12 @@
 import HoverEffect from "./utilities/hoverEffect"
 import {Link} from "react-router-dom"
 
-const NavbarLinks = ({data}) =>(
-  <HoverEffect className="navLink" hoverID={data.id}>
+const NavbarLinks = ({className,data}) =>(
+  <HoverEffect className={className} hoverID={data.id}>
     <Link to={data.link}>
       {data.name}
     </Link>
-  </HoverEffect>
+  </HoverEffect> 
 )
 
 export default NavbarLinks

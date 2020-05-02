@@ -10,14 +10,11 @@
 
 *{
     margin: 0px;
+    padding: 0px;
 }
 
 html{
     background-color: var(--main-bg-color);
-}
-
-img{
-    max-width:15vw;
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -25,21 +22,19 @@ h1,h2,h3,h4,h5,h6{
 }
 
 h1{
-    text-emphasis: bold;
-    font-size: 4.5em;
+    font-size: 2.5em;
 }
 
 h2{
-    font-size:2em;
-    text-emphasis: bold;
+    font-size:1.4em;
 }
 
 h3{
-    font-size:1.5em;
+    font-size:1.1em;
 }
 
 h4{
-    font-size:1.3em;
+    font-size: .9em;
 }
 
 h6{
@@ -49,16 +44,16 @@ h6{
 
 p{
     line-height: 1.5em;
-    font-size: 1.5em;
+    font-size: 1em;
 }
 
 ul{
-    border-left: .3em solid var(--seperator);
+    border-left: 2px solid var(--seperator);
 }
 
 li{
     list-style: square;
-    font-size: 1.5em;
+    margin-left: 2em;
 }
 
 li:not(:last-child){

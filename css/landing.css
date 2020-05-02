@@ -1,62 +1,51 @@
-:root {
-    --main-bg-color:#316cb3   ;
-    --main-text-color: white;
-    --component-bg-color: #c5d8ef ;
-}
-
-*{
+.landing{
     justify-content: center;
     text-align: center;
-    padding-top: 10px;
+    padding-top: 10vh;
 }
 
-html{
-    height:90vh;
+.landing .portrait{
+    padding: 4em 0 4em 0;
     display: flex;
-    align-items: center;
+    justify-content: center;
 }
 
-.name{
+.landing .portrait img{
+    width:50vw;
+    max-height:40vh;
+}
+
+.landing .name{
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-    color: var(--main-text-color);
+    color: var(--nav-text-color);
     letter-spacing: 2px;
     word-spacing: 6px;
-    font-size:10vw;
+    font-size:4em;
     font-weight: 400;
 }
 
-.navLink{
-    margin-top: 25px;
-    padding:5px;
-    color:var(--main-text-color);
-    font-size: 6vw;
+.landing_NavLink *{
+    color:var(--nav-text-color);
+    font-size: 3em;
+    text-decoration: none;
     font-style: normal;
     text-shadow: 9px 10px 10px rgba(71,29,136,0.5);
 }
 
-.navLink:hover{
+.landing_NavLink *:hover{
     text-shadow: 10px -10px 19px rgba(71,29,136,0.5), 10px 10px 19px rgba(71,29,136,0.5), -10px 10px 19px rgba(71,29,136,0.5), -10px -10px 19px rgba(71,29,136,0.5);
 }
 
-.portrait img{
-    max-width:50vw;
-    max-height:40vh;
+.landing .navLinks{
+    padding: 0 10vw 0 10vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 4em;
 }
 
-@media (min-width:900px){
-    .name{
-        font-size: 100px;
-    }
-}
-
-@media (min-width:1001px){
-    .navLinks{
+@media (min-width:1000px){
+    .landing .navLinks{
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-column-gap: 10em;
-    }
-    .navLink{
-        text-decoration: none;
-        font-size:7vh;
     }
 }

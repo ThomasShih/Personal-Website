@@ -4,7 +4,9 @@ import HoverEffect from "./utilities/hoverEffect"
 import {Link} from "react-router-dom"
 
 function Navbar(){
-  const navbarComponents = navbarLinks.map(link => <NavbarLinks key={link.id} data={link}/>)
+  const navbarComponents = navbarLinks.map(link => <NavbarLinks key={link.id}
+                                                                className={"navbar_navlink"}
+                                                                data={link}/>)
 
   return(
     <div id="navbar">
