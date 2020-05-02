@@ -1,8 +1,13 @@
-function shake(elementID,intensity){
+function shake(elementID,targetNode = undefined,intensity = 2){
   //setup
   var id = "#" + elementID;
-  const originalElementColor = document.getElementById(elementID).style.color
-  document.getElementById(elementID).setAttribute("originalColor",originalElementColor) //place this color attribute in the element as an interupting this animation means the color wont be set
+  let element = targetNode != undefined?
+                document.getElementById(elementID).childNodes[targetNode]
+                :
+                element = document.getElementById(elementID)
+
+  const originalElementColor = element.style.color
+  element.setAttribute("originalColor",originalElementColor) //place this color attribute in the element as an interupting this animation means the color wont be set
 
   //processing
   anime.remove(id);
@@ -20,8 +25,8 @@ function shake(elementID,intensity){
                   {translateX:0}
               ],
     easing: 'easeInOutQuad',
-    changeBegin   : ()=>{document.getElementById(elementID).style.color= "rgba(255, 0, 0, 0.7)"},
-    changeComplete: ()=>{document.getElementById(elementID).style.color= document.getElementById(elementID).getAttribute("originalColor")},
+    changeBegin   : ()=>{element.style.color= "rgba(255, 0, 0, 0.7)"},
+    changeComplete: ()=>{element.style.color= element.getAttribute("originalColor")},
   });
 };
 

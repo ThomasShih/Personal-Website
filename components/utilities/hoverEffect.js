@@ -4,7 +4,6 @@ function animateButton(scale, duration, elasticity,elementID){
   const originalColor = document.getElementById(elementID).getAttribute("originalColor")
 
   //processing
-  anime.remove(id);
   anime({
     targets: id,
     scale: scale,
