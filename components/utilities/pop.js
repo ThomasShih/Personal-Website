@@ -10,7 +10,7 @@ function pop(elementID,scale,opacity){
     targets: id,
     opacity: opacity,
     scale: scale,
-    easing: "spring(1,200,13,0)", //'spring(mass, stiffness, damping, velocity)'
+    easing: "spring(1,200,15,0)", //'spring(mass, stiffness, damping, velocity)'
   });
 };
 
