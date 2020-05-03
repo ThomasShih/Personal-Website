@@ -5,6 +5,7 @@ import {popIn} from "./utilities/pop.js"
 const Loading = () => <div className="loadingDotsContainer"><h1 className="loadingDots"></h1></div>
 
 function Landing(){
+  document.title = "⭐ Landing"
   const navbarComponents = navbarLinks.map(link => <NavbarLinks key={link.id}
                                                                 className={"landing_NavLink"}
                                                                 data= {link}/>)

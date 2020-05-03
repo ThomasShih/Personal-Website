@@ -42,6 +42,7 @@ function Projects(){
   const projects = projectList.map((project,projectNumber) => (<ProjectCard key={`projectNumber${projectNumber}`}
                                                                             id={`projectNumber${projectNumber}`}
                                                                             data={project} />))
+  document.title = "💻 Projects"
   return(
     <div className="layout">
       {projects}
