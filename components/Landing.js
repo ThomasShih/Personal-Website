@@ -5,10 +5,11 @@ import {popIn} from "./utilities/pop.js"
 const Loading = () => <div className="loadingDotsContainer"><h1 className="loadingDots"></h1></div>
 
 function Landing(){
-  document.title = "⭐ Landing"
+  document.title = "Thomas Shih: Landing"
   const navbarComponents = navbarLinks.map(link => <NavbarLinks key={link.id}
                                                                 className={"landing_NavLink"}
-                                                                data= {link}/>)
+                                                                data= {link}
+                                                                style={{opacity:0}}/>)
   const [loading,setLoading] = React.useState(true)
 
   React.useEffect(() => {
@@ -26,9 +27,9 @@ function Landing(){
           </>
           :
           <div className="landing">
-            <div className="name" id="name">Thomas Shih</div>
+            <div className="name" id="name" style={{opacity:0}}>Thomas Shih</div>
             <div className="portrait">
-              <img id="landingPotrait" src="./assets/portraitCircle.svg"></img>
+              <img id="landingPotrait" src="./assets/portraitCircle.svg" style={{opacity:0}}></img>
             </div>
             <div className="navLinks">
                 {navbarComponents}
