@@ -1,5 +1,5 @@
-import HoverEffect from "./utilities/hoverEffect"
-import {shake} from "./utilities/shake"
+import HoverEffect from "../utilities/hoverEffect"
+import {shake} from "../utilities/shake"
 import {Link} from "react-router-dom"
 
 const isLinkValid = (desiredAddress,notValidCallback) =>{

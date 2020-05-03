@@ -1,6 +1,6 @@
 import NavbarLinks from "./NavbarLinks"
-import navbarLinks from "../javaScriptAssets/navbarLinks"
-import HoverEffect from "./utilities/hoverEffect"
+import navbarLinks from "../../javaScriptAssets/navbarLinks"
+import HoverEffect from "../utilities/hoverEffect"
 import {Link} from "react-router-dom"
 
 function Navbar(){

@@ -1,4 +1,4 @@
-import HoverEffect from "./utilities/hoverEffect"
+import HoverEffect from "../utilities/hoverEffect"
 
 function IconLink(props){
   return(

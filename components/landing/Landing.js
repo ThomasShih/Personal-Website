@@ -1,6 +1,6 @@
-import NavbarLinks from "./NavbarLinks"
-import navbarLinks from "../javaScriptAssets/navbarLinks"
-import {popIn} from "./utilities/pop.js"
+import NavbarLinks from "../common/NavbarLinks"
+import navbarLinks from "../../javaScriptAssets/navbarLinks"
+import {popIn} from "../utilities/pop.js"
 
 const Loading = () => <div className="loadingDotsContainer"><h1 className="loadingDots"></h1></div>
 

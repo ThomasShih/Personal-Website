@@ -1,8 +1,8 @@
-import IconLink from "./IconLink"
-import iconLinkList from "../javaScriptAssets/contactIcons"
-import HoverEffect from "./utilities/hoverEffect"
-import {usePop} from "./utilities/pop"
-const resumeSrc = "../assets/resume.pdf"
+import IconLink from "../common/IconLink"
+import iconLinkList from "../../javaScriptAssets/contactIcons"
+import HoverEffect from "../utilities/hoverEffect"
+import {usePop} from "../utilities/pop"
+const resumeSrc = "../../assets/resume.pdf"
 
 function ResumeDownload(){
   return(

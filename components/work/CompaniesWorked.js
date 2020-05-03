@@ -1,6 +1,6 @@
-import companyList from "../javaScriptAssets/companyList"
-import HoverEffect from "./utilities/hoverEffect"
-import {usePop} from "./utilities/pop"
+import companyList from "../../javaScriptAssets/companyList"
+import HoverEffect from "../utilities/hoverEffect"
+import {usePop} from "../utilities/pop"
 
 function CompanyProfile(props){
   const descLi = props.data.desc.map((item,index) => <li key={index}>{item}</li>)

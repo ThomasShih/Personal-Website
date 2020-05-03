@@ -1,5 +1,5 @@
-import recommendationsList from "../javaScriptAssets/recommendationsList"
-import {usePop} from "./utilities/pop"
+import recommendationsList from "../../javaScriptAssets/recommendationsList"
+import {usePop} from "../utilities/pop"
 
 function RecommendationCard({data,id}){
   React.useEffect(() => usePop(id),[])

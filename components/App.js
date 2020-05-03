@@ -1,7 +1,7 @@
-import Landing from "./Landing"
-import Navbar from "./Navbar"
-import Projects from "./Projects"
-import Work from "./Work"
+import Landing from "./landing/Landing"
+import Navbar from "./common/Navbar"
+import Projects from "./projects/projects"
+import Work from "./work/Work"
 import {Switch, Route} from "react-router-dom"
 
 const NotLanding = () => (
