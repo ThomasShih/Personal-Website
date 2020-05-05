@@ -1,3 +1,5 @@
+import {CSSTransition} from 'react-transition-group'
+
 function pop(elementID,scale,opacity){
   if(elementID === "*"){
     var id = elementID;
@@ -24,4 +26,14 @@ function usePop(id){
   return cleanUp
 }
 
-export {popIn,popOut,usePop}
+const PopAnimation = ({ in: inProp,children,className,id,style}) => {
+  console.log(inProp)
+  return(
+  <div className={className} id={id} style={style}>
+    <CSSTransition in={inProp} timeout={500} classNames="my-node">
+      {children}
+    </CSSTransition>
+  </div>
+)}
+
+export {popIn,popOut,usePop,PopAnimation}

@@ -1,6 +1,5 @@
 import NavbarLinks from "../common/NavbarLinks"
 import navbarLinks from "../../javaScriptAssets/navbarLinks"
-import {usePop} from "../utilities/pop.js"
 
 const Loading = () => <div className="loadingDotsContainer"><h1 className="loadingDots"></h1></div>
 
@@ -11,17 +10,13 @@ function Landing(){
                                                                 data= {link}/>)
   const [loading,setLoading] = React.useState(true)
 
-  React.useEffect(() => {usePop("testtesttest")},[loading])
-
-  return(
-        <>
-        { loading? 
+  return( loading? 
           <>
             <Loading/>
             <img style={{width:".01px"}} id="landingPotrait" src="./assets/portraitCircle.svg" onLoad={() => setLoading(false)}></img>
           </>
           :
-          <div className="landing" id="testtesttest" style={{opacity:0}}>
+          <div className="landing">
             <div className="name" id="name">Thomas Shih</div>
             <div className="portrait">
               <img id="landingPotrait" src="./assets/portraitCircle.svg"></img>
@@ -30,8 +25,6 @@ function Landing(){
                 {navbarComponents}
             </div>
           </div>
-        }
-        </>
       )
 }
 

@@ -1,21 +1,25 @@
 import recommendationsList from "../../javaScriptAssets/recommendationsList"
-import {usePop} from "../utilities/pop"
+import {PopAnimation} from "../utilities/pop"
 
-function RecommendationCard({data,id}){
-  React.useEffect(() => usePop(id),[])
+function RecommendationCard({data,id,toggle}){
   return(
-    <div id={id} style={{opacity:0}} className="recommendationCard">
-      <img className="imgUrl" src={data.imgUrl} alt="can't find image"></img>
-      <h2 className="referenceName">{data.name}</h2>
-      <h3 className="position">{data.position}</h3>
-      <h4 className="company">{data.company}</h4>
-      <p className="referenceText">{data.text}</p>
-    </div>
+    <PopAnimation in={toggle}>
+      <div id={id} className="recommendationCard">
+        <img className="imgUrl" src={data.imgUrl} alt="can't find image"></img>
+        <h2 className="referenceName">{data.name}</h2>
+        <h3 className="position">{data.position}</h3>
+        <h4 className="company">{data.company}</h4>
+        <p className="referenceText">{data.text}</p>
+      </div>
+    </PopAnimation>
   )
 }
 
-function Recommendations(){
-  const recommendationsComponents = recommendationsList.map((recommendation,index) => <RecommendationCard key={index} data={recommendation} id={`recommendation${index}`}/>)
+function Recommendations({toggle}){
+  const recommendationsComponents = recommendationsList.map((recommendation,index) => <RecommendationCard key={index}
+                                                                                                          data={recommendation}
+                                                                                                          id={`recommendation${index}`}
+                                                                                                          toggle={toggle}/>)
   return(
     <div className="aside">
       {recommendationsComponents}

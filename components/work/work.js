@@ -4,11 +4,13 @@ import ContactCard from "./ContactCard"
 
 function Work(){
   document.title = "🔨 Work"
+  const [toggle,setToggle] = React.useState(false)
+  React.useEffect(() => {setToggle(true)},[])
   return(
     <div className="work">
-      <ContactCard     id={"ContactCard"}    />
-      <Recommendations id={"Recommendations"}/>
-      <CompaniesWorked id={"CompaniesWorked"}/>
+      <ContactCard     toggle={toggle} id={"ContactCard"}    />
+      <Recommendations toggle={toggle} id={"Recommendations"}/>
+      <CompaniesWorked toggle={toggle} id={"CompaniesWorked"}/>
     </div>
   )
 }

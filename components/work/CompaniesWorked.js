@@ -1,6 +1,6 @@
 import companyList from "../../javaScriptAssets/companyList"
 import HoverEffect from "../utilities/hoverEffect"
-import {usePop} from "../utilities/pop"
+import {PopAnimation} from "../utilities/pop"
 
 function CompanyProfile(props){
   const descLi = props.data.desc.map((item,index) => <li key={index}>{item}</li>)
@@ -18,15 +18,16 @@ function CompanyProfile(props){
 }
 
 
-function CompaniesWorked({id}){
+function CompaniesWorked({id,toggle}){
   const companyComponents = companyList.map(company => <CompanyProfile  key     ={company.id}
                                                                         data    ={company}/>)
-  React.useEffect(() => usePop(id),[])
   return(
-    <div id={id} style={{opacity:0}} >
-      <h1 className="workExperienceHeader">Work Experience</h1>
-      {companyComponents}
-    </div>
+    <PopAnimation in={toggle} style={{gridArea:"companiesWorked"}}>
+      <div id={id}>
+        <h1 className="workExperienceHeader">Work Experience</h1>
+        {companyComponents}
+      </div>
+    </PopAnimation>
   )
 }
 
