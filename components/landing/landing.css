@@ -4,7 +4,7 @@
     grid-template-areas: "portrait" "flair";
 
     row-gap: 5em;
-    padding: 5em;
+    padding: 5em 5em 6em 5em;
 }
 
 .landing .portrait{
