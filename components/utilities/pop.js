@@ -3,7 +3,7 @@ import './utilities.css';
 
 const PopAnimation = ({ in: inProp,children,className,id,style}) => {
   return(
-    <CSSTransition in={inProp} timeout={750} classNames="my-node">
+    <CSSTransition mountOnEnter in={inProp} timeout={1250} classNames="my-node">
       <div className={className} id={id} style={style}>
         {children}
       </div>

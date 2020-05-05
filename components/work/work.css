@@ -4,6 +4,7 @@
 
 .firstSection{
     background-color: var(--main-bg-color);
+    padding: 1em;
 }
 
 .secondSection{
@@ -14,7 +15,6 @@
     background-color: var(--component-bg-color);
     border-radius: 1.7em;
     box-shadow: var(--boxShadow);
-    margin: 1em;
 }
 
 .profileImg{
