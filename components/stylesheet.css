@@ -1,11 +1,16 @@
 :root {
-    --main-bg-color:#316cb3   ;
-    --main-text-color: #316cb3;
-    --component-bg-color: white ;
-    --nav-bg-color:#558dd1;
-    --nav-text-color:white;
-    --seperator: #c4c4c4;
+    --main-bg-color:#284B63   ;
+    --main-text-color: #284B63;
+    --component-bg-color: #F4F9E9 ;
+    --nav-bg-color:#153243;
+    --nav-text-color:#F4F9E9;
+    --seperator: #F4F9E9;
+    --highLight: #C4A29E;
     --boxShadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+#body{
+    min-height:100vh;
 }
 
 *{
@@ -18,6 +23,7 @@ html{
 }
 
 h1,h2,h3,h4,h5,h6{
+    font: montserrat;
     color: var(--main-text-color);
 }
 

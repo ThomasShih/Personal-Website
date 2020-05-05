@@ -1,51 +1,37 @@
 .landing{
-    justify-content: center;
-    text-align: center;
-    padding: 10vh 10vw 10vh 10vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "portrait" "flair";
+
+    row-gap: 5em;
+    padding: 5em;
 }
 
 .landing .portrait{
-    padding: 4em 0 4em 0;
+    grid-area:portrait;
+    text-align: center;
+}
+
+.landing div img{
+    max-width: 30vw;
+}
+
+.landing .flair{
     display: flex;
-    justify-content: center;
+    align-items: center;
 }
 
-.landing .portrait img{
-    width:50vw;
-    max-height:40vh;
-}
-
-.landing .name{
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-    color: var(--nav-text-color);
-    letter-spacing: 2px;
-    word-spacing: 6px;
-    font-size:4em;
-    font-weight: 400;
-}
-
-.landing_NavLink *{
+.landing .flair ul{
+    grid-area:flair;
+    border: none;
     color:var(--nav-text-color);
-    font-size: 3em;
-    text-decoration: none;
-    font-style: normal;
-    text-shadow: 9px 10px 10px rgba(71,29,136,0.5);
-}
-
-.landing_NavLink *:hover{
-    text-shadow: 10px -10px 19px rgba(71,29,136,0.5), 10px 10px 19px rgba(71,29,136,0.5), -10px 10px 19px rgba(71,29,136,0.5), -10px -10px 19px rgba(71,29,136,0.5);
-}
-
-.landing .navLinks{
-    padding: 0 10vw 0 10vw;
-    display: grid;
-    grid-template-columns: 1fr;
-    row-gap: 4em;
+    font-size:2em;
 }
 
 @media (min-width:1000px){
-    .landing .navLinks{
-        display: grid;
+    .landing{
         grid-template-columns: 1fr 1fr;
+        grid-template-areas: "portrait flair";
+        column-gap:10em;
     }
 }

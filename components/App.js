@@ -1,5 +1,6 @@
 import Landing from "./landing/Landing"
 import Navbar from "./navbar/Navbar"
+import Footer from "./footer/Footer"
 import Projects from "./projects/projects"
 import Work from "./work/Work"
 import {Switch, Route} from "react-router-dom"
@@ -23,7 +24,9 @@ const NotLanding = () => (
 const App = () => (
   <Switch>
     <Route exact path="/">
+      <Navbar/>
       <Landing/>
+      <Footer/>
     </Route>
     <Route path="*">
       <NotLanding/>

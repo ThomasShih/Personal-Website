@@ -1,14 +1,19 @@
-import NavbarLinks from "../navbar/NavbarLinks"
-import navbarLinks from "../../javaScriptAssets/navbarLinks"
-
+import Typist from 'react-typist'
 import "./landing.css"
 const Loading = () => <div className="loadingDotsContainer"><h1 className="loadingDots"></h1></div>
 
+const flairList = ["Front-End Developer","Python Data Analyst","Math Tutor","Photographer"]
+
+const flairComponents = flairList.map((flair,index) => (
+  <li key={index}>
+    <Typist startDelay={1000 + 1500*index} cursor={{show:false}}>
+      <span>{flair}</span>
+    </Typist>
+  </li>
+))
+
 function Landing(){
   document.title = "Thomas Shih: Landing"
-  const navbarComponents = navbarLinks.map(link => <NavbarLinks key={link.id}
-                                                                className={"landing_NavLink"}
-                                                                data= {link}/>)
   const [loading,setLoading] = React.useState(true)
 
   return( loading? 
@@ -18,12 +23,13 @@ function Landing(){
           </>
           :
           <div className="landing">
-            <div className="name" id="name">Thomas Shih</div>
             <div className="portrait">
               <img id="landingPotrait" src="./assets/portraitCircle.svg"></img>
             </div>
-            <div className="navLinks">
-                {navbarComponents}
+            <div className="flair">
+              <ul>
+                {flairComponents}
+              </ul>
             </div>
           </div>
       )

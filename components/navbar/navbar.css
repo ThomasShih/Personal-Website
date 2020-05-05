@@ -10,7 +10,6 @@
 #navbar #landingPageLink .name{
     font-size: 3em;
     color: var(--nav-text-color);
-    font-weight: bold;
     text-decoration: none;
     text-align: center;
 }
@@ -18,7 +17,6 @@
 .navbar_navlink *{
     color:var(--nav-text-color);
     font-size: 2em;
-    font-weight:lighter;
     text-decoration: none;
 }
 
