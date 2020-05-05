@@ -7,10 +7,13 @@ import {Switch, Route} from "react-router-dom"
 
 import "./stylesheet.css"
 
-const NotLanding = () => (
+const App = () => (
   <>
     <Navbar/>
     <Switch>
+      <Route exact path="/">
+        <Landing/>
+      </Route>
       <Route exact path="/work">
         <Work/>
       </Route>
@@ -18,20 +21,8 @@ const NotLanding = () => (
         <Projects/>
       </Route>
     </Switch>
+    <Footer/>
   </>
-)
-
-const App = () => (
-  <Switch>
-    <Route exact path="/">
-      <Navbar/>
-      <Landing/>
-      <Footer/>
-    </Route>
-    <Route path="*">
-      <NotLanding/>
-    </Route>
-  </Switch>
 )
 
 export default App

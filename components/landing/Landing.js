@@ -1,16 +1,6 @@
-import Typist from 'react-typist'
+import Flair from "./Flair"
 import "./landing.css"
 const Loading = () => <div className="loadingDotsContainer"><h1 className="loadingDots"></h1></div>
-
-const flairList = ["Front-End Developer","Python Data Analyst","Math Tutor","Photographer"]
-
-const flairComponents = flairList.map((flair,index) => (
-  <li key={index}>
-    <Typist startDelay={1000 + 1500*index} cursor={{show:false}}>
-      <span>{flair}</span>
-    </Typist>
-  </li>
-))
 
 function Landing(){
   document.title = "Thomas Shih: Landing"
@@ -27,9 +17,7 @@ function Landing(){
               <img id="landingPotrait" src="./assets/portraitCircle.svg"></img>
             </div>
             <div className="flair">
-              <ul>
-                {flairComponents}
-              </ul>
+              <Flair/>
             </div>
           </div>
       )
