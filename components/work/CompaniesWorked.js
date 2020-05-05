@@ -22,7 +22,7 @@ function CompaniesWorked({id,toggle}){
   const companyComponents = companyList.map(company => <CompanyProfile  key     ={company.id}
                                                                         data    ={company}/>)
   return(
-    <PopAnimation in={toggle} style={{gridArea:"companiesWorked"}}>
+    <PopAnimation in={toggle} className={"CompaniesWorked"}>
       <div id={id}>
         <h1 className="workExperienceHeader">Work Experience</h1>
         {companyComponents}

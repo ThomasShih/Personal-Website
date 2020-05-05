@@ -21,7 +21,7 @@ function Recommendations({toggle}){
                                                                                                           id={`recommendation${index}`}
                                                                                                           toggle={toggle}/>)
   return(
-    <div className="aside">
+    <div className="Recommendations">
       {recommendationsComponents}
     </div>
   )

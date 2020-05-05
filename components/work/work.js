@@ -1,7 +1,5 @@
 import Recommendations from "./Recommendations"
 import CompaniesWorked from "./CompaniesWorked"
-import ContactCard from "./ContactCard"
-
 import "./work.css"
 function Work(){
   document.title = "🔨 Work"
@@ -9,9 +7,12 @@ function Work(){
   React.useEffect(() => {setToggle(true)},[])
   return(
     <div className="work">
-      <ContactCard     toggle={toggle} id={"ContactCard"}    />
-      <Recommendations toggle={toggle} id={"Recommendations"}/>
-      <CompaniesWorked toggle={toggle} id={"CompaniesWorked"}/>
+      <div className={"firstSection"}>
+        <CompaniesWorked toggle={toggle}/>
+      </div>
+      <div className={"secondSection"}>
+        <Recommendations toggle={toggle} id={"Recommendations"}/>
+      </div>
     </div>
   )
 }

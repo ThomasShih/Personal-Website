@@ -1,14 +1,26 @@
-#CompaniesWorked{
+.work{
+    padding-bottom:12em;
+}
+
+.firstSection{
+    background-color: var(--main-bg-color);
+}
+
+.secondSection{
+    padding: 1em;
+}
+
+.CompaniesWorked{
     background-color: var(--component-bg-color);
-    box-shadow: var(--boxShadow);
     border-radius: 1.7em;
+    box-shadow: var(--boxShadow);
+    margin: 1em;
 }
-.aside{
-    grid-area: aside;
-}
+
 .profileImg{
     grid-area:profileImg;
 }
+
 .logoLink{
     grid-area:logo;
     max-width:15vw;
@@ -32,22 +44,32 @@
 .length{
     grid-area:length;
 }
+
 .referenceName{
     grid-area:referenceName;
     text-align: right;
 }
+
 .position{
     grid-area:position;
     text-align: right;
 }
+
 .company{
     grid-area:company;
     text-align: right;
 }
+
 .imgUrl{
     grid-area:imgUrl;
     border-radius: 50%;
     width: 100%;
+}
+
+.Recommendations{
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 4%;
 }
 
 .recommendationCard{
@@ -82,22 +104,6 @@
     column-gap: 2em;
 }
 
-.work{
-    margin: 1em;
-    display:grid;
-    grid-template-rows: auto;
-    row-gap: 1em;
-    column-gap:1em;
-}
-
-#ContactCard{
-    box-shadow: var(--boxShadow);
-    background-color: var(--component-bg-color);
-    border-radius: 1.7em;
-    display: grid;
-    height:100%;
-}
-
 @media (max-width:1000px){
     .work .companyProfile{
         margin:2em;
@@ -109,41 +115,32 @@
         "length"
         "desc";
     }
-
-    .work{
-        grid-template-areas: 
-        "ContactCard"
-        "companiesWorked"
-        "aside";
-    }
-
-    #ContactCard{
-        padding:2em;
-        grid-template-columns: auto;
-        grid-template-rows: auto;
-        row-gap: 2em;
-    }
 }
 
 @media (min-width:1001px){
+    .work{
+        padding-bottom:3em;
+    }
+
+    .Recommendations{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 4%;
+    }
+
+    .firstSection{
+        background-image: url(https://images.unsplash.com/photo-1561494653-744c43aed0c1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1929&q=80);
+        background-repeat: no-repeat;
+        background-size:cover;
+        background-position: 80%;
+        padding: 4% 4% 4% 40%;
+    }
+
     .companyProfile{
         grid-template-columns: 3fr 5fr 1fr;
         grid-template-rows: 1fr 2fr;
         grid-template-areas: 
         "logo jobTitle length"
         "logo desc     length";
-    }
-
-    .work{
-        grid-template-columns: 5fr 4fr;
-        grid-template-areas: 
-        "ContactCard     aside"
-        "companiesWorked aside";
-    }
-
-    #ContactCard{
-        padding: 0em 3em 0em 2em;
-        grid-template-columns: auto repeat(3, 6em);
-        column-gap: 2em;
     }
 }

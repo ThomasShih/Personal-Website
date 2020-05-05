@@ -1,3 +1,7 @@
+.projectPage{
+    padding-bottom: 4em;
+}
+
 .projectCard .media{
     grid-area:media;
     display: flex;

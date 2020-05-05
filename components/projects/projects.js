@@ -51,7 +51,7 @@ function Projects(){
                                                                             data={project}
                                                                             toggle={toggle}/>))
   return(
-    <div className="layout">
+    <div className="projectPage">
       {projects}
     </div>
   )
