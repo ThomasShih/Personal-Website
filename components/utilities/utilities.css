@@ -1,16 +1,16 @@
-.my-node-enter {
+.popAnimation-enter {
   opacity: 0;
   transform: scale(0.5);
 }
-.my-node-enter-active {
+.popAnimation-enter-active {
   opacity: 1;
   transform: scale(1);
-  transition: all 1000ms cubic-bezier(0,0,.3,1.2);
+  transition: all 750ms cubic-bezier(0,0,.3,1.2);
 }
-.my-node-exit {
+.popAnimation-exit {
   transform: scale(1);
 }
-.my-node-exit-active {
+.popAnimation-exit-active {
   transform: scale(0);
-  transition: all 1000ms cubic-bezier(0,0,.3,1.2);
+  transition: all 750ms cubic-bezier(0,0,.3,1.2);
 }
