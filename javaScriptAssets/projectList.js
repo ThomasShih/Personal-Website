@@ -2,7 +2,7 @@ const projectList = [
     {
         id:"personalWebsite",
         name:"Personal Website",
-        desc:"This personal website was built out of a want for me to develop a personal portfolio and to pratice web development using React. This whole project was built from the ground up using React, the animations was developed using anime.js. The website is statically hosted and a domain was acquired. Responsiveness was a priorty however some animations is only optimized for desktop.",
+        desc:"This personal website was built out of the purpose to migrate my current software development skills over to front-end development and ReactJS. The entire site was built from the ground up without themes and templates.",
         gitHub:"https://github.com/ThomasShih/Personal-Website",
         video:null,
         length:"Ongoing",

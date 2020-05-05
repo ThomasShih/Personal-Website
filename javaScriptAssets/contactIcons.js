@@ -1,6 +1,6 @@
 const iconLinkList = [
     {
-      logoUrl:"https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg",
+      logoUrl:"../assets/LinkedInIcon.svg",
       url:"https://www.linkedin.com/in/thomas-shih/",
       alt:"LinkedIn",
       id:"LinkedInIcon"
