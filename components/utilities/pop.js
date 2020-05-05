@@ -1,4 +1,5 @@
-import {CSSTransition} from 'react-transition-group'
+import {CSSTransition} from 'react-transition-group';
+import './utilities.css';
 
 const PopAnimation = ({ in: inProp,children,className,id,style}) => {
   console.log(inProp)

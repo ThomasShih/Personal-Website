@@ -147,20 +147,3 @@
         column-gap: 2em;
     }
 }
-
-.my-node-enter {
-    opacity: 0;
-    transform: scale(0.5);
-}
-.my-node-enter-active {
-    opacity: 1;
-    transform: scale(1);
-    transition: all .5s cubic-bezier(0,0,.3,1.2);
-}
-.my-node-exit {
-    transform: scale(1);
-}
-.my-node-exit-active {
-    transform: scale(0);
-    transition: all .5s cubic-bezier(0,0,.3,1.2);
-}
