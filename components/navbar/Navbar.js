@@ -3,6 +3,7 @@ import navbarLinks from "../../javaScriptAssets/navbarLinks"
 import HoverEffect from "../utilities/hoverEffect"
 import {Link} from "react-router-dom"
 
+import "./navbar.css"
 function Navbar(){
   const navbarComponents = navbarLinks.map(link => <NavbarLinks key={link.id}
                                                                 className={"navbar_navlink"}

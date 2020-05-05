@@ -1,8 +1,10 @@
 import Landing from "./landing/Landing"
-import Navbar from "./common/Navbar"
+import Navbar from "./navbar/Navbar"
 import Projects from "./projects/projects"
 import Work from "./work/Work"
 import {Switch, Route} from "react-router-dom"
+
+import "./stylesheet.css"
 
 const NotLanding = () => (
   <>

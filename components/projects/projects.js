@@ -3,6 +3,8 @@ import iconLinkList from "../../javaScriptAssets/contactIcons"
 import IconLink from "../common/IconLink"
 import Media from "./Media"
 import HoverEffect from "../utilities/hoverEffect"
+
+import "./projects.css"
 import {PopAnimation} from "../utilities/pop"
 
 function ProjectCard({data,id,toggle}){

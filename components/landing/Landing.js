@@ -1,6 +1,7 @@
-import NavbarLinks from "../common/NavbarLinks"
+import NavbarLinks from "../navbar/NavbarLinks"
 import navbarLinks from "../../javaScriptAssets/navbarLinks"
 
+import "./landing.css"
 const Loading = () => <div className="loadingDotsContainer"><h1 className="loadingDots"></h1></div>
 
 function Landing(){

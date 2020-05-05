@@ -2,6 +2,7 @@ import Recommendations from "./Recommendations"
 import CompaniesWorked from "./CompaniesWorked"
 import ContactCard from "./ContactCard"
 
+import "./work.css"
 function Work(){
   document.title = "🔨 Work"
   const [toggle,setToggle] = React.useState(false)
