@@ -42,7 +42,7 @@ function ProjectCard({data,id,toggle}){
 }
 
 function Projects(){
-  document.title = "💻 Projects"
+  document.title = "Projects"
   const [toggle,setToggle] = React.useState(false)
   React.useEffect(() => {setToggle(true)},[])
 

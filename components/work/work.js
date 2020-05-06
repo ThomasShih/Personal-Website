@@ -2,7 +2,7 @@ import Recommendations from "./Recommendations"
 import CompaniesWorked from "./CompaniesWorked"
 import "./work.css"
 function Work(){
-  document.title = "🔨 Work"
+  document.title = "Work"
   const [toggle,setToggle] = React.useState(false)
   React.useEffect(() => {setToggle(true)},[])
   return(

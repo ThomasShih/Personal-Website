@@ -3,7 +3,7 @@ import "./landing.css"
 const Loading = () => <div className="loadingDotsContainer"><h1 className="loadingDots"></h1></div>
 
 function Landing(){
-  document.title = "Thomas Shih: Landing"
+  document.title = "Landing"
   const [loading,setLoading] = React.useState(true)
 
   return( loading? 
