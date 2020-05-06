@@ -5,6 +5,7 @@
 
     row-gap: 5em;
     padding: 5em;
+    padding-bottom: 12em;
 }
 
 .landing .portrait{
@@ -32,6 +33,7 @@
     color:var(--nav-text-color);
     font-weight:normal;
 }
+
 @media (min-width:1000px){
     .landing{
         grid-template-columns: 1fr 1fr;
@@ -39,5 +41,6 @@
             "portrait flair"
             "portrait query";
         column-gap:10em;
+        padding-bottom: 5em;
     }
 }
