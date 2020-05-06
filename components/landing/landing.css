@@ -1,7 +1,7 @@
 .landing{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-areas: "portrait" "flair";
+    grid-template-areas: "portrait" "flair" "query";
 
     row-gap: 5em;
     padding: 5em;
@@ -23,15 +23,21 @@
 
 .landing .flair ul{
     grid-area:flair;
-    border: none;
     color:var(--nav-text-color);
     font-size:2em;
 }
 
+.landing .query{
+    grid-area:query;
+    color:var(--nav-text-color);
+    font-weight:normal;
+}
 @media (min-width:1000px){
     .landing{
         grid-template-columns: 1fr 1fr;
-        grid-template-areas: "portrait flair";
+        grid-template-areas: 
+            "portrait flair"
+            "portrait query";
         column-gap:10em;
     }
 }

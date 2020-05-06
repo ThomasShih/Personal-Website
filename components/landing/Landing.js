@@ -18,7 +18,13 @@ function Landing(){
             </div>
             <div className="flair">
               <Flair/>
+              <br/>
             </div>
+            <h2 className="query">
+              Hello! I am a young professional with a passion for math, computer science, and nature. 
+              <br/><br/>
+              I am currently looking for front-end development positons. I am also available for freelancing where my skills apply. To contact me, please find my information in the footer below.
+            </h2>
           </div>
       )
 }
