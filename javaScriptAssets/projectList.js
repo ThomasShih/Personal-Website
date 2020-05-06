@@ -62,7 +62,6 @@ const projectList = [
         length:"Finished",
         picture:null,
         keywords:["Verilog","FPGA","VHDL","PPM"],
-        attribution:"Video Component by CookPete from https://github.com/CookPete/react-player",
     },
     {
         id:"construction",
