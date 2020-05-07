@@ -2,6 +2,16 @@ import HoverEffect from "../utilities/hoverEffect"
 import {shake} from "../utilities/shake"
 import {Link} from "react-router-dom"
 
+const Component = window.styled.div`
+  color:var(--nav-text-color);
+  a{
+  color:inherit;
+  font-size: 2em;
+  text-decoration: none;
+  transition: color .1s;
+  }
+`;
+
 const isLinkValid = (desiredAddress,notValidCallback) =>{
   const currentAddress = window.location.pathname
   
@@ -17,9 +27,11 @@ function NavbarLinks({className,data}){
 
   return(
     <HoverEffect className={className} hoverID={data.id}>
-      <Link to={data.link} onClick={checkValid}>
-        {data.name}
-      </Link>
+      <Component>
+        <Link to={data.link} onClick={checkValid}>
+          {data.name}
+        </Link>
+      </Component>
     </HoverEffect> 
   )
 }

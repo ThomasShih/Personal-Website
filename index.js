@@ -1,7 +1,7 @@
 import checkCDNexist from "./components/utilities/checkCDN"
 import {BrowserRouter as Router} from "react-router-dom"
 
-import App from "./components/App.js"
+import App from "./components/App.jsx"
 const Index = () => {
   checkCDNexist()
   return(

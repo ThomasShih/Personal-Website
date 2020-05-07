@@ -25,7 +25,7 @@ function shake(elementID,targetNode = undefined,intensity = 2){
                   {translateX:0}
               ],
     easing: 'easeInOutQuad',
-    changeBegin   : ()=>{element.style.color= "rgba(255, 0, 0, 0.7)"},
+    changeBegin   : ()=>{element.style.color= "rgba(255, 0, 0, 0.9)"},
     changeComplete: ()=>{element.style.color= element.getAttribute("originalColor")},
   });
 };
