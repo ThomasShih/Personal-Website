@@ -7,7 +7,6 @@ import {PopAnimation} from "../utilities/pop"
 
 function ProjectCard({data,id,toggle}){
   const keywords = data.keywords.map((keyword,keywordID) => <li key={keywordID} className="keyword">{keyword}</li>)
-  console.log(data)
   return(
     <PopAnimation in={toggle}>
       <div className="projectCard" id={id}>

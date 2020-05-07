@@ -1,4 +1,4 @@
-import Landing from "./landing/Landing"
+import Landing from "./landing/Landing.jsx"
 import Navbar from "./navbar/Navbar"
 import Footer from "./footer/Footer"
 import Projects from "./projects/projects"
