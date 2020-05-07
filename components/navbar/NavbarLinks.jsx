@@ -3,10 +3,12 @@ import {shake} from "../utilities/shake"
 import {Link} from "react-router-dom"
 
 const Component = window.styled.div`
-  a{
   color:var(--nav-text-color);
+  a{
+  color:inherit;
   font-size: 2em;
   text-decoration: none;
+  transition: color .1s;
   }
 `;
 
