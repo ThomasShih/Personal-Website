@@ -4,7 +4,6 @@ import {PopAnimation} from "../utilities/pop"
 
 const Component = window.styled.div`
   margin:1em 1em 0 1em;
-  padding: 3em;
   border-radius: 1.7em;
   background-color: var(--component-bg-color);
   color:var(--component-text-color);
